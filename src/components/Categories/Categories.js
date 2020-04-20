@@ -5,7 +5,7 @@ import './Categories.scss';
 class Categories extends Component {
   render() {
     return(
-      <div class="categories">
+      <div>
       </div>
     )
   }
