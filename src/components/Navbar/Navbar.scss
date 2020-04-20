@@ -1,0 +1,110 @@
+.navBody {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: 1080px;
+    height: 66px;
+    margin: 0px auto;
+    .navSectionLeft {
+      display: flex;
+      flex-direction: row;
+      font-size: 15px;
+      padding: 0px;
+
+      .navCategory {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        margin-right: 37px;
+      }
+
+      .navCategory > img {
+        position: absolute;
+        width: 7px;
+        height: 4px;
+        top: 7px;
+        left: 60px;
+        margin-left: 6px;
+      }
+
+      .shopInfo, .consumerSenter {
+        margin-right: 24px;
+      }
+    }
+
+    .kakaoFriends {
+      display: flex;
+      width: 168px;
+      margin: 0px 100px 0px 180px;
+    }
+
+    .navSectionRight {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+
+      .search {
+        position: relative;
+        top: 13px;
+        width: 216px;
+        height: 40px;
+        border-radius: 3.2px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(227, 229, 232);
+
+        input {
+          top: 0px;
+          left: 0px;
+          width: 150px;
+          margin-left: 32px;
+          height: 18px;
+          font-size: 15px;
+          line-height: 1.17;
+          color: rgb(137, 137, 141);
+          padding: 10px 0px;
+          border-width: 0px;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          outline: none;
+        }
+      }
+
+      .searchBotton {
+        position: absolute;
+        width: 14.39px;
+        height: 14.39px;
+        padding: 0 0 0 10px;
+        top: 25px;
+      }
+
+      .mypageIcon {
+        width: 18px;
+        height: 19px;
+        padding: 0px;
+        margin: 23.5px 0px;
+      }
+      
+      .baskestIcon {
+        width: 17px;
+        height: 21px;
+        padding: 0px;
+        margin: 22.5px 0px;
+      }
+      
+      .langenIcons {
+        width: 23px;
+        height: 23px;
+        padding: 0px;
+        margin: 22.5px 0px;
+      }
+    }
+  }
+}

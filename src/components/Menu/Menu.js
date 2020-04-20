@@ -4,7 +4,9 @@ import '../styles/Menu.scss';
 
 class Menu extends Component {
   render(){
-    return("");
+    return(
+      <></>
+    );
   }
 }
 
