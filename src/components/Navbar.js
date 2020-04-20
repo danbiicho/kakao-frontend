@@ -1,3 +1,3 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './Nav.scss';
+import { withRouter } from 'react-router-dom';
+import '../styles/Navbar.scss';
