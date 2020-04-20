@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Categories from '../../components/Categories/Categories';
 import './Home.scss';
+import MainContents from '../../components/MainContents/MainContents';
+import Menu from '../../components/Menu/Menu';
 
 
 class Home extends Component {
@@ -12,6 +14,8 @@ class Home extends Component {
       <div>
         <Navbar />
         <Categories />
+        <Menu />
+        <MainContents />
         <Footer />
       </div>
     )
