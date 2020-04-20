@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import '../styles/MainContents.scss';
-import '../styles/Reset.scss';
+import './MainContents.scss';
+import '../../styles/Reset.scss';
 
 class MainContents extends Component {
     render() {
