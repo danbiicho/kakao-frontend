@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import Categories from '../../components/Categories/Categories';
 import './Home.scss';
+import Categories from '../../components/Categories/Categories';
 import MainContents from '../../components/MainContents/MainContents';
 import Menu from '../../components/Menu/Menu';
 
