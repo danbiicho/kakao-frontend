@@ -1,3 +1,109 @@
-.login-page{
-    color: red;
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.kakao.Wap {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  padding: 50px 0;
+  border: 1px solid black;
+}
+.mAarticle {
+  min-height: 545px;
+  padding: 59px 69px 49px;
+  border: 1px solid black;
+}
+
+.footer_comm {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.login_banner {
+  text-align: center;
+  font-size: 0;
+  border: 1px solid black;
+}
+
+.wrap_banner {
+  display: inline-block;
+  position: relative;
+  width: 540px;
+  height: 402px;
+  margin: 37px 40px 0 0;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+}
+.wrap_form {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 100%;
+  max-width: 480px;
+  padding: 60px 70px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  height: 480px;
+}
+
+.info_banner {
+  position: relative;
+  z-index: 10;
+  padding: 16px 9px;
+}
+
+.tit_banner {
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 32px;
+  color: #252525;
+}
+
+.desc_banner {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.kakaoServiceLogo {
+  display: inline-block;
+  width: 88px;
+  height: 27px;
+  margin: 0 auto;
+  line-height: 1;
+  vertical-align: top;
+  background: url(/assets/weblogin/techin/ico_account_200221.png);
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.fieldset {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
 }
