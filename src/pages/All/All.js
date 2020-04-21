@@ -1,3 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import '../styles/All.scss';
+import './All.scss';
+
+class All extends Component {
+  render() {
+    return(
+      <div>
+      </div>
+    )
+  }
+}
+
+export default withRouter(All);

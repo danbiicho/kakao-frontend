@@ -186,8 +186,7 @@ class Categories extends Component {
               <div class="categoryList1">
                 <li 
                 onMouseEnter={this.openAll}
-                onMouseLeave={this.closeAll}>전체
-                </li>
+                onMouseLeave={this.closeAll}>전체</li>
                 <li 
                 onMouseEnter={this.openTheme}
                 onMouseLeave={this.closeTheme}>테마 기획전</li>

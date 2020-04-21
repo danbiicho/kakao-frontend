@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
-//import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import './Home.scss';
+import Categories from '../../components/Categories/Categories';
+import MainContents from '../../components/MainContents/MainContents';
+import Menu from '../../components/Menu/Menu';
 
 
 class Home extends Component {
@@ -10,7 +13,10 @@ class Home extends Component {
     return(
       <div>
         <Navbar />
-        {/*<Footer />*/}
+        <Categories />
+        <Menu />
+        <MainContents />
+        <Footer />
       </div>
     )
   }
