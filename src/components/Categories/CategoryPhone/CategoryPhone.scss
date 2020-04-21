@@ -1,0 +1,20 @@
+.categoryPhone {
+  width: 185px;
+
+  .categoryUl {
+    margin: 0 0 0 30px;
+    padding: 32px 0;
+
+    .categoryPhoneList {
+      display: flex;
+      flex-direction: column;
+      height: 338px;
+      border-right: rgb(227, 229, 232) solid 1px;
+      
+      span {
+        margin-bottom: 9px;
+        font-size: 15px;
+      }
+    }
+  }
+}
