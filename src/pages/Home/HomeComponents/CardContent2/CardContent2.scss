@@ -1,0 +1,181 @@
+.CardContent2 {
+  .imgWrapImg {
+    width: 329px;
+    height: 247px;
+    margin: 0px 0px 20.1px;
+  }
+
+  // .itemListWrap {
+  //   .itemListLi {
+  //     display: flex;
+  //     flex-flow: wrap;
+  //   }
+  // }
+
+  .content {
+    width: 329px;
+    padding: 0px 23px 40px;
+  }
+
+  .cardContents {
+    width: 329px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px 0px;
+    border-radius: 5.9px;
+
+    .detailWrap {
+      margin: 0 20px;
+
+      .detailLabel {
+        height: 22px;
+        background-color: rgb(62, 210, 229);
+        padding: 0 8px;
+        line-height: 22px;
+        border-radius: 2px;
+        display: inline-block;
+        font-family: SFProText;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      h3 {
+        margin-top: 11px;
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: -0.29px;
+        font-family: SFProText;
+        font-weight: bold;
+        width: 290px;
+        line-height: 34px;
+      }
+
+      p {
+        font-size: 16px;
+        letter-spacing: -0.25px;
+        line-height: 24px;
+        font-family: SFProText;
+        color: rgb(102, 102, 102);
+      }
+    }
+
+    .listWrap {
+      margin-top: 20px;
+      padding-bottom: 11px;
+
+      .itemLisRowUl {
+        // margin-top: 20px;
+        // padding-bottom: 11px;
+
+        .itemListRowLi {
+          position: relative;
+          margin: 0px 20px;
+          display: flex;
+          .itemListA {
+            text-decoration: none;
+            padding: 20px 0px;
+            display: flex;
+            border-top: 1px solid rgb(242, 242, 242);
+
+            .item {
+              .itemImg {
+                width: 102px;
+                height: 102px;
+                margin-right: 15px;
+                border-radius: 4px;
+                position: relative;
+                display: block;
+              }
+            }
+
+            .itemInfoWrap {
+              .listTitle_p {
+                font-family: SFProText;
+                display: inline-block;
+                font-size: 16px;
+                letter-spacing: -0.23px;
+                width: 173px;
+                line-height: 20px;
+                margin: 2px 0 3px 0;
+                color: rgb(119, 119, 119);
+              }
+
+              .priceArea {
+                .priceAreaPercent {
+                  margin-right: 4px;
+                  font-size: 16px;
+                  letter-spacing: -0.3px;
+                  font-family: SFProText;
+                  font-weight: bold;
+                  text-align: left;
+                  color: rgb(255, 68, 127);
+                  line-height: 20px;
+                }
+
+                .priceAreaPrice {
+                  font-size: 16px;
+                  letter-spacing: -0.3px;
+                  line-height: 20px;
+                  color: rgb(255, 68, 127);
+                }
+
+                .priceAreaWon {
+                  font-size: 15px;
+                  letter-spacing: -0.23px;
+                  font-family: SFProText;
+                  font-weight: bold;
+                  color: rgb(255, 68, 127);
+                }
+              }
+
+              .or {
+                display: flex;
+                .orPrice {
+                  font-size: 16px;
+                  letter-spacing: -0.25px;
+                  line-height: 20px;
+                  color: rgb(154, 154, 158);
+                  text-decoration: line-through;
+                }
+
+                .orWon {
+                  font-size: 15px;
+                  letter-spacing: -0.23px;
+                  font-family: SFProText;
+                  color: rgb(154, 154, 158);
+                  line-height: 20px;
+                  text-decoration: line-through;
+                }
+              }
+
+              .cartButton {
+                margin: 0;
+                padding: 0;
+                display: block;
+                margin-left: -9px;
+                width: 32px;
+                height: 32px;
+                position: absolute;
+              }
+
+              .cartImg {
+                width: 100%;
+                height: 100%;
+                background: url("https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png")
+                  center center / 100% no-repeat;
+                border-style: none;
+              }
+              .itemPrice {
+                font-size: 16px;
+                letter-spacing: -0.25px;
+                line-height: 20px;
+                font-family: SFProText;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
