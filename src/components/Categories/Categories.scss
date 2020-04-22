@@ -1,6 +1,44 @@
 .categories {
-  width: 674px;
-  height: 368.5px;
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  
+  .categoriesHover {
+    position: relative;
+    width: 1080px;
+    height: 368.5px;
 
+    .categoryWrapper {
+      display: flex;
+      position: absolute;
+      width: 674px;
+      height: 400px;
+      left: -32px;
+      background-color: white;
+      box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.08);
+      
+      .categoryMenuUl {
+        display: flex;
+        margin: 0;
+        padding: 32px 0;
+
+        .categoryList1 {
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 0 32px;
+          padding: 0;
+          width: 145px;
+          border-right: rgb(227, 229, 232) solid 1px;
+          li {
+            list-style: none;
+            margin-bottom: 9px;
+            font-size: 15px;
+            cursor: pointer;
+          }
+          .all {
+             cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }
