@@ -28,5 +28,13 @@
       line-height: 1.5;
       color: #000000;
     }
+    .highlight {
+      max-width: 80px;
+      width: 80px;
+      height: 3px;
+      border-top: 3px solid rgb(48, 48, 48);
+      margin: 0;
+      padding: 0;
+    }
   }
 }
