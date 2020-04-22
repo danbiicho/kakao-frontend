@@ -1,0 +1,110 @@
+.NewArticle {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  .articleWidth {
+    width: 1100px;
+    padding: 100px 20px 0px 20px;
+    margin-left: 20px;
+
+    .articleLists {
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    .addItemsWith {
+      width: 1080px;
+      display: flex;
+      justify-content: center;
+
+      .addItems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 343px;
+        height: 52px;
+        border: rgb(230, 230, 230) solid 1px;
+        border-width: 1px;
+        border-radius: 4px;
+        font-size: 15px;
+
+        img {
+          width: 13px;
+          height: 13px;
+          margin: -4px 0 0 2px;
+        }
+      }
+    }
+
+    .newSubject {
+      .topNewSubject {
+        font-size: 15px;
+        color: #9A9A9E;
+        margin-bottom: 5px;
+      }
+
+      .bottomNewSubject {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+
+    .itemListWrap {
+      position: relative;
+      width: 255px;
+      height: 381px;
+      margin-right: 20px;
+
+      .item {
+        width: 255px;
+      }
+
+      .itemSubject {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        .topItemSubject {
+          width: 220px;
+          font-size: 16px;
+          color: #777777;
+          margin: 10px 0px 5px 0;
+        }
+        .buyImg {
+          width: 32px;
+          height: 32px;
+          left: 229px;
+        }
+      }
+
+      .itemCost {
+        .itemCostNum {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .won {
+          font-weight: bold;
+          
+        }
+      }
+
+      .buyImg {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        margin-top: 1px;
+      }
+
+      .opacityWrap {
+        position: absolute;
+        width: 255px;
+        height: 255px;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.02);
+      }
+    }
+  }
+}

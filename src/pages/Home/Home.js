@@ -13,7 +13,6 @@ class Home extends Component {
     return(
       <div>
         <Navbar />
-        <Categories />
         <Menu />
         <MainContents />
         <Footer />
