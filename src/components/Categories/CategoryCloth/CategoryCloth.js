@@ -4,10 +4,10 @@ import './CategoryCloth.scss';
 
 class CategoryCloth extends Component {
   render() {
-    return(
-      <div className="categoryCloth"
-      onMouseEnter={this.props.onMouseEnter}
-      onMouseLeave={this.props.onMouseLeave}>
+    return (
+      <div className="CategoryCloth"
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}>
         <ul className="categoryUl">
           <li className="categoryClothList">
             <span>여성</span>

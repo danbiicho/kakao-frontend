@@ -178,62 +178,62 @@ class Categories extends Component {
   }
 
   render() {
-    return(
-      <div className="categories">
+    return (
+      <div className="Categories">
         <div className="categoriesHover">
           <div className="categoryWrapper" onMouseLeave={this.props.onMouseLeave}>
             <ul className="categoryMenuUl">
               <div class="categoryList1">
-                <li 
-                onMouseEnter={this.openAll}
-                onMouseLeave={this.closeAll}>전체</li>
-                <li 
-                onMouseEnter={this.openTheme}
-                onMouseLeave={this.closeTheme}>테마 기획전</li>
                 <li
-                onMouseEnter={this.openLiving}
-                onMouseLeave={this.closeLiving}>토이</li>
+                  onMouseEnter={this.openAll}
+                  onMouseLeave={this.closeAll}>전체</li>
                 <li
-                onMouseEnter={this.openLiving}
-                onMouseLeave={this.closeLiving}>리빙</li>
+                  onMouseEnter={this.openTheme}
+                  onMouseLeave={this.closeTheme}>테마 기획전</li>
                 <li
-                onMouseEnter={this.openStuff}
-                onMouseLeave={this.closeStuff}>잡화 </li> 
+                  onMouseEnter={this.openLiving}
+                  onMouseLeave={this.closeLiving}>토이</li>
                 <li
-                onMouseEnter={this.openPhrases}
-                onMouseLeave={this.closePhrases}>문구</li>
+                  onMouseEnter={this.openLiving}
+                  onMouseLeave={this.closeLiving}>리빙</li>
                 <li
-                onMouseEnter={this.openCloth}
-                onMouseLeave={this.closeCloth}>의류</li>
+                  onMouseEnter={this.openStuff}
+                  onMouseLeave={this.closeStuff}>잡화 </li>
                 <li
-                onMouseEnter={this.openPajama}
-                onMouseLeave={this.closePajama}>파자마</li>
+                  onMouseEnter={this.openPhrases}
+                  onMouseLeave={this.closePhrases}>문구</li>
                 <li
-                onMouseEnter={this.openTravel}
-                onMouseLeave={this.closeTravel}>여행/레져</li>
+                  onMouseEnter={this.openCloth}
+                  onMouseLeave={this.closeCloth}>의류</li>
                 <li
-                onMouseEnter={this.openLife}
-                onMouseLeave={this.closeLife}>생활테크</li>  
+                  onMouseEnter={this.openPajama}
+                  onMouseLeave={this.closePajama}>파자마</li>
                 <li
-                onMouseEnter={this.openPhone}
-                onMouseLeave={this.closePhone}>폰 액세서리</li>
+                  onMouseEnter={this.openTravel}
+                  onMouseLeave={this.closeTravel}>여행/레져</li>
                 <li
-                onMouseEnter={this.openFood}
-                onMouseLeave={this.closeFood}>식품</li>
+                  onMouseEnter={this.openLife}
+                  onMouseLeave={this.closeLife}>생활테크</li>
+                <li
+                  onMouseEnter={this.openPhone}
+                  onMouseLeave={this.closePhone}>폰 액세서리</li>
+                <li
+                  onMouseEnter={this.openFood}
+                  onMouseLeave={this.closeFood}>식품</li>
               </div>
             </ul>
-            {this.state.isAll && <CategoryAll onMouseEnter={this.openAll}/>}
-            {this.state.isTheme && <CategoryTheme onMouseEnter={this.openTheme}/>}
-            {this.state.isToy && <CategoryToy onMouseEnter={this.openToy}/>}
-            {this.state.isLiving && <CategoryLiving onMouseEnter={this.openLiving}/>}
-            {this.state.isStuff && <CategoryStuff onMouseEnter={this.openStuff}/>}
-            {this.state.isPhrases && <CategoryPhrases onMouseEnter={this.openPhrases}/>}
-            {this.state.isCloth && <CategoryCloth onMouseEnter={this.openCloth}/>}
-            {this.state.isPajama && <CategoryPajama onMouseEnter={this.openPajama}/>}
-            {this.state.isTravel && <CategoryTravel onMouseEnter={this.openTravel}/>}
-            {this.state.isLife && <CategoryLife onMouseEnter={this.openLife}/>}
-            {this.state.isPhone && <CategoryPhone onMouseEnter={this.openPhone}/>}
-            {this.state.isFood && <CategoryFood onMouseEnter={this.openFood}/>}
+            {this.state.isAll && <CategoryAll onMouseEnter={this.openAll} />}
+            {this.state.isTheme && <CategoryTheme onMouseEnter={this.openTheme} />}
+            {this.state.isToy && <CategoryToy onMouseEnter={this.openToy} />}
+            {this.state.isLiving && <CategoryLiving onMouseEnter={this.openLiving} />}
+            {this.state.isStuff && <CategoryStuff onMouseEnter={this.openStuff} />}
+            {this.state.isPhrases && <CategoryPhrases onMouseEnter={this.openPhrases} />}
+            {this.state.isCloth && <CategoryCloth onMouseEnter={this.openCloth} />}
+            {this.state.isPajama && <CategoryPajama onMouseEnter={this.openPajama} />}
+            {this.state.isTravel && <CategoryTravel onMouseEnter={this.openTravel} />}
+            {this.state.isLife && <CategoryLife onMouseEnter={this.openLife} />}
+            {this.state.isPhone && <CategoryPhone onMouseEnter={this.openPhone} />}
+            {this.state.isFood && <CategoryFood onMouseEnter={this.openFood} />}
           </div>
         </div>
       </div>

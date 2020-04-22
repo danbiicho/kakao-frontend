@@ -1,3 +1,5 @@
+@import "../../../../styles/Common.scss";
+
 .CardContent2 {
   .imgWrapImg {
     width: 329px;
@@ -5,15 +7,7 @@
     margin: 0px 0px 20.1px;
   }
 
-  // .itemListWrap {
-  //   .itemListLi {
-  //     display: flex;
-  //     flex-flow: wrap;
-  //   }
-  // }
-
   .content {
-    width: 329px;
     padding: 0px 23px 40px;
   }
 
@@ -64,9 +58,6 @@
       padding-bottom: 11px;
 
       .itemLisRowUl {
-        // margin-top: 20px;
-        // padding-bottom: 11px;
-
         .itemListRowLi {
           position: relative;
           margin: 0px 20px;
@@ -169,7 +160,7 @@
                 font-size: 16px;
                 letter-spacing: -0.25px;
                 line-height: 20px;
-                font-family: SFProText;
+                font-family: $font-SFPro;
                 font-weight: bold;
               }
             }

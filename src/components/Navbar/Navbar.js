@@ -24,15 +24,15 @@ class Navbar extends Component {
   }
 
   render() {
-    return(
-      <div className="navBody">
+    return (
+      <div className="Navbar">
         <nav>
           <ul className="navSectionLeft">
             <div className="navCategory">
               <div className="category"
-              onMouseEnter={this.openNav}
+                onMouseEnter={this.openNav}
               >카테고리</div>
-              <img src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-triangle.png" alt=""/>
+              <img src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-triangle.png" alt="" />
             </div>
             <div className="shopInfo">
               <div>매장안내</div>
@@ -41,20 +41,20 @@ class Navbar extends Component {
               <div>고객센터</div>
             </div>
           </ul>
-          <img className="kakaoFriends" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/friends-logo.png" alt=""/>
+          <img className="kakaoFriends" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/friends-logo.png" alt="" />
           <div className="navSectionRight">
             <div className="searchBox">
               <div className="search">
                 <input placeholder="무엇을 찾으세요?"></input>
               </div>
-              <img className="searchBotton" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-search.png" alt=""/>
+              <img className="searchBotton" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-search.png" alt="" />
             </div>
-            <img className="mypageIcon" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-mypage.png" alt=""/>
-            <img className="baskestIcon" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-basket.png" alt=""/>
-            <img className="langenIcons" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-lang-en.png" alt=""/>
+            <img className="mypageIcon" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-mypage.png" alt="" />
+            <img className="baskestIcon" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-basket.png" alt="" />
+            <img className="langenIcons" src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-lang-en.png" alt="" />
           </div>
         </nav>
-        {this.state.isNavOpen && <Categories onMouseLeave={this.closeNav}/>}
+        {this.state.isNavOpen && <Categories onMouseLeave={this.closeNav} />}
       </div>
     )
   }

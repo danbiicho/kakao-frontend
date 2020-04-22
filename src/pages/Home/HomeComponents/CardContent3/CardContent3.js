@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './CardContent3.scss';
-import '../../../../styles/Reset.scss';
 
 class CardContent3 extends Component {
     render() {

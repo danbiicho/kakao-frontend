@@ -1,13 +1,4 @@
-// .imgWrapImg {
-//   width: 329px;
-//   height: 247px;
-// }
-
-// .CardContent3 {
-//   .cardContents {
-//     display: flex;
-//   }
-// }
+@import "../../../../styles/Common.scss";
 
 .CardContent3 {
   .imgWrapImg {
@@ -24,15 +15,14 @@
   }
 
   .content {
-    width: 329px;
     padding: 0px 23px 40px;
   }
 
   .cardContents {
+    width: 329px;
     margin: 0;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px 0px;
     border-radius: 5.9px;
-    // display: flex;
 
     .detailWrap {
       margin: 0 20px;
@@ -75,11 +65,8 @@
       padding: 21px 20px 0px;
 
       .itemListUl {
-        // width: 329px;
         display: flex;
         flex-flow: wrap;
-        // position: relative;
-        // margin: 0px 20px;
       }
 
       .itemListLi {
@@ -133,7 +120,7 @@
           font-size: 16px;
           letter-spacing: -0.25px;
           line-height: 20px;
-          font-family: SFProText;
+          font-family: $font-SFPro;
           font-weight: bold;
         }
       }

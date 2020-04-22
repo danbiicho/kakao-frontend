@@ -9,15 +9,15 @@ class Menu extends Component {
   // }
   render() {
     return (
-      <div class="menu">
+      <div class="Menu">
         <ul className="list">
-          <li>
-            <button onClick={this.handleClick}>홈</button>
+          <li className="Li1">
+            <button>홈</button>
             <hr className="highlight" />
           </li>
-          <li><button>신규</button></li>
-          <li><button>인기</button></li>
-          <li><button>세일</button></li>
+          <li className="2" ><button>신규</button></li>
+          <li className="3" ><button>인기</button></li>
+          <li ><button>세일</button></li>
           <li><button>전체</button></li>
         </ul>
       </div>
