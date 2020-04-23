@@ -1,0 +1,18 @@
+.CategoryLists {
+  display: flex;
+  align-items: center;
+  width: 1080px;
+  height: 58px;
+  margin: 0 auto;
+  border-bottom: #ededed solid 1px;
+
+  button {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(154, 154, 158);
+    background-color: white;
+    border: none;
+    padding: 0 15px;
+    outline: none;
+  }
+}
