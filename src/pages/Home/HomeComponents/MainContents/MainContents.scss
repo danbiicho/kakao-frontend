@@ -1,0 +1,10 @@
+.MainContents {
+  width: 1126px;
+  margin: 66px auto 0;
+  padding-top: 111px;
+  display: flex;
+  flex-flow: wrap;
+  .contents {
+    justify-content: center;
+  }
+}

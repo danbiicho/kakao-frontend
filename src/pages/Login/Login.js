@@ -1,13 +1,13 @@
 import React from 'react'
 import './Login.scss';
 
-class Login extends React.Component{
+class Login extends React.Component {
 
-    render(){
-        
-        return(
-            <div className = "login-page">로그인페이지
-            <button> 가입하디</button> 
+    render() {
+
+        return (
+            <div className="Login">로그인페이지
+            <button> 가입하디</button>
             </div>
 
 
