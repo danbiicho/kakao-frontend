@@ -1,4 +1,4 @@
-.navBody {
+.Navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,7 +38,8 @@
         }
       }
 
-      .shopInfo, .consumerSenter {
+      .shopInfo,
+      .consumerSenter {
         margin-right: 24px;
       }
     }
@@ -69,7 +70,7 @@
           left: 0px;
           width: 150px;
           margin-left: 32px;
-          height: 18px;
+          // height: 18px;
           font-size: 15px;
           line-height: 1.17;
           color: rgb(137, 137, 141);
@@ -84,7 +85,7 @@
 
       .searchBotton {
         position: absolute;
-        width: 14.39px;
+        // width: 14.39px;
         height: 14.39px;
         padding: 0 0 0 10px;
         top: 25px;
@@ -96,14 +97,14 @@
         padding: 0px;
         margin: 23.5px 0px;
       }
-      
+
       .baskestIcon {
         width: 17px;
         height: 21px;
         padding: 0px;
         margin: 22.5px 0px;
       }
-      
+
       .langenIcons {
         width: 23px;
         height: 23px;

@@ -4,10 +4,10 @@ import './CategoryAll.scss';
 
 class CategoryAll extends Component {
   render() {
-    return(
-      <div className="categoryAll"
-      onMouseEnter={this.props.onMouseEnter}
-      onMouseLeave={this.props.onMouseLeave}>
+    return (
+      <div className="CategoryAll"
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}>
         <ul className="categoryUl">
           <li className="categoryAllList">
             <span>판매량순</span>

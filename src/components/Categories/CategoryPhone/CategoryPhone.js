@@ -4,10 +4,10 @@ import './CategoryPhone.scss';
 
 class CategoryPhone extends Component {
   render() {
-    return(
-      <div className="categoryPhone"
-      onMouseEnter={this.props.onMouseEnter}
-      onMouseLeave={this.props.onMouseLeave}>
+    return (
+      <div className="CategoryPhone"
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}>
         <ul className="categoryUl">
           <li className="categoryPhoneList">
             <span>휴대폰 케이스</span>

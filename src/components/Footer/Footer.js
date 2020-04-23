@@ -4,11 +4,11 @@ import './Footer.scss';
 
 class Footer extends Component {
   render() {
-    return(
-      <div class="footer">
+    return (
+      <div class="Footer">
         <div class="footerTop">
           <div>
-            <img src="https://t1.kakaocdn.net/friends/new_store/2.0/common/brand-banner.png" alt=""/>
+            <img src="https://t1.kakaocdn.net/friends/new_store/2.0/common/brand-banner.png" alt="" />
             <span class="footerTop_banner">친구들이 궁금해요? 지금 바로 만나보세요!</span>
             <span class="footerTop_kakaoIntro">카카오프렌즈 소개</span>
             <span class="footerTop_middleBar">|</span>

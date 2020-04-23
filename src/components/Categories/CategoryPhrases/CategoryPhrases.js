@@ -4,10 +4,10 @@ import './CategoryPhrases.scss';
 
 class CategoryPhrases extends Component {
   render() {
-    return(
-      <div className="categoryPhrases"
-      onMouseEnter={this.props.onMouseEnter}
-      onMouseLeave={this.props.onMouseLeave}>
+    return (
+      <div className="CategoryPhrases"
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}>
         <ul className="categoryUl">
           <li className="categoryPhrasesList">
             <span>필기구</span>
