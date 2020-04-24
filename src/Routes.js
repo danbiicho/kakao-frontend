@@ -6,7 +6,7 @@ import New from "./pages/New/New";
 import Hot from "./pages/Hot/Hot";
 import Sale from "./pages/Sale/Sale";
 import All from "./pages/All/All";
-import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll/ToyMiniDoll";
+import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll";
 
 class Routes extends Component {
   render() {
