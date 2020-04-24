@@ -18,7 +18,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div class="Menu">
+      <div className="Menu">
         <ul className="list">
           <li>
             <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(0) }} >홈</button>

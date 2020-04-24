@@ -7,18 +7,19 @@ import Categories from '../../components/Categories/Categories';
 import Menu from '../../components/Menu/Menu';
 import '../../styles/Reset.scss';
 import './Home.scss';
+import CategoryHeader from '../../components/CategoryHeader/CategoryHeader';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Categories />
+        {/* <Navbar />
         <Menu />
         <MainContents />
-        <Footer />
+        <Footer /> */}
+        <CategoryHeader />
       </div>
-    )
+    );
   }
 }
 export default withRouter(Home);
