@@ -3,6 +3,8 @@
     display: flex;
     position: relative;
     justify-content: center;
+    width: 1080px;
+    margin: 0 auto;
 
     img {
       margin-top: 66px;
@@ -11,7 +13,7 @@
     p {
       position: absolute;
       top: 155px;
-      left: 420px;
+      left: 0px;
       font-weight: bold;
       line-height: 1.25;
       letter-spacing: -0.2px;
