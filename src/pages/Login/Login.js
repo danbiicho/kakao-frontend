@@ -2,6 +2,34 @@ import React from "react";
 import "./Login.scss";
 
 class Login extends React.Component {
+  // --------여기 함수 만들기 ------------
+
+  constructor() {
+    super();
+
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
+
+  //  ES6 브라우져가 호풀한다. 괄호 인자르(event)
+  handleChage = (event) => {
+    this.setState({ email: event.target.value });
+
+    console.log(event.target.value);
+  };
+
+  handePassword = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  handleclick = () => {
+    console.log("email ====>", this.state.email);
+    console.log("password ====>", this.state.password);
+  };
+
+  // --------여기 함수 만들기 ------------
   render() {
     return (
       <body>
@@ -41,6 +69,7 @@ class Login extends React.Component {
                     </h1>
                     <div>
                       <input
+                        onChange={this.handleChage}
                         className="idbox"
                         type="text"
                         placeholder="카카오계정 (이메일 또는 전화번호)"
@@ -48,6 +77,7 @@ class Login extends React.Component {
                     </div>
                     <div>
                       <input
+                        onChange={this.handePassword}
                         className="idbox"
                         type="password"
                         placeholder="비밀번호"
@@ -57,7 +87,11 @@ class Login extends React.Component {
 
                         <div>로그인 상태 유지</div>
                       </div>
-                      <button class="loginbutton" type="button">
+                      <button
+                        onClick={this.handleclick}
+                        class="loginbutton"
+                        type="button"
+                      >
                         로그인
                       </button>
                       <div class="joinpox">
