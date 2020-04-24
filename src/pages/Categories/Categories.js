@@ -8,7 +8,6 @@ class Categories extends Component {
     super();
     this.state = {};
   }
-
   render() {
     return (
       <div className="Categories">

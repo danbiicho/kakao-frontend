@@ -3,15 +3,18 @@
 
   .categoryUl {
     margin: 0 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    height: 338px;
-    border-right: rgb(227, 229, 232) solid 1px;
+    padding: 32px 0;
 
-    li {
-      margin-bottom: 9px;
-      font-size: 15px;
-      cursor: pointer;
+    .categoryToyList {
+      display: flex;
+      flex-direction: column;
+      height: 338px;
+      border-right: rgb(227, 229, 232) solid 1px;
+
+      span {
+        margin-bottom: 9px;
+        font-size: 15px;
+      }
     }
   }
 }
