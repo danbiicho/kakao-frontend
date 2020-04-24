@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import './CategoryToy.scss';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import "./CategoryToy.scss";
 
 class CategoryToy extends Component {
   render() {
@@ -16,7 +16,7 @@ class CategoryToy extends Component {
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }
 
