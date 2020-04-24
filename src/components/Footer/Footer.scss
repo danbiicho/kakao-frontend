@@ -1,5 +1,5 @@
-.footer {
-  position: fixed;
+.Footer {
+  position: relative;
   bottom: 0px;
   left: 0px;
   width: 100%;
@@ -19,19 +19,19 @@
       img {
         width: 65px;
       }
-  
+
       .footerTop_banner {
         padding: 0 26px 0 7px;
       }
-  
+
       .footerTop_kakaoIntro {
         margin: 0px 20px;
       }
-  
+
       .footerTop_middleBar {
         color: rgb(255, 255, 255);
       }
-  
+
       .footerTop_brandstory {
         margin: 0px 20px;
       }
@@ -50,12 +50,12 @@
       width: 1080px;
       .footerBottom_firstline {
         padding: 28px 0 34px;
-  
+
         .termsOfUse {
           margin-left: 10px;
           padding-left: 22px;
         }
-  
+
         .partnershipLnquiry {
           margin-left: 10px;
           padding-left: 22px;
@@ -63,14 +63,15 @@
       }
     }
 
-    .footerBottom_kakaoInfo, .footerBottom_lastline {
+    .footerBottom_kakaoInfo,
+    .footerBottom_lastline {
       font-size: 12px;
 
       p {
         margin: 2px 0;
       }
     }
-    
+
     .footerBottom_lastline {
       font-weight: bold;
       line-height: 18px;

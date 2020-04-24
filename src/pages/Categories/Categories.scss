@@ -1,0 +1,50 @@
+.Categories {
+  display: flex;
+  justify-content: center;
+
+  .categoriesHover {
+    position: relative;
+
+    .categoryWrapper {
+      display: flex;
+      position: absolute;
+      width: 674px;
+      height: 400px;
+      left: -570px;
+      background-color: white;
+      box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.08);
+      animation: fadeIn ease 10s;
+      -webkit-animation: fadeIn ease 0.5s;
+
+      .categoryMenuUl {
+        display: flex;
+        margin: 0;
+        padding: 32px 0;
+
+        .categoryList1 {
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 0 32px;
+          padding: 0;
+          width: 145px;
+          border-right: rgb(227, 229, 232) solid 1px;
+          li {
+            list-style: none;
+            margin-bottom: 9px;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
