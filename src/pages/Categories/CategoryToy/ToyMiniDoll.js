@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import NavBar from "../../../../components/Navbar/Navbar";
-import CategoryLists from "../../../../components/CategoryLists/CategoryLists";
-import Footer from "../../../../components/Footer/Footer";
+import NavBar from "../../../components/Navbar/Navbar";
+import CategoryLists from "../../../components/CategoryLists/CategoryLists";
+import Footer from "../../../components/Footer/Footer";
+import ItemLists from "../../../components/ItemLists/ItemLists";
 import "./ToyMiniDoll.scss";
 
 class ToyMiniDoll extends Component {
@@ -20,6 +21,7 @@ class ToyMiniDoll extends Component {
           <p>토이</p>
         </div>
         <CategoryLists />
+        <ItemLists />
         <Footer />
       </div>
     );
