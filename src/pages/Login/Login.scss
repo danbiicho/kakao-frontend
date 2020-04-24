@@ -1,3 +1,217 @@
-.Login {
-  color: red;
+.body {
+  margin: 600px;
+  height: auto;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.kakao.Wap {
+  margin-top: 300px;
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+.mAarticle {
+  min-height: 545px;
+  padding: 59px 69px 69px;
+  border: 1px solid hidden;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.footer_comm {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 0.5px solid #e5e5e5;
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid white;
+}
+
+.login_banner {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 0;
+  border: 1px solid hidden;
+  padding-left: 100px;
+}
+
+.wrap_banner {
+  display: inline-block;
+  position: relative;
+  width: 540px;
+  height: 402px;
+  margin: 37px 40px 0 0;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+}
+.wrap_form {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 100%;
+  max-width: 480px;
+  padding: 60px 70px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  height: 480px;
+}
+
+.info_banner {
+  padding: 16px 9px;
+}
+
+.tit_banner {
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 32px;
+  color: #252525;
+}
+
+.desc_banner {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.kakaoServiceLogo {
+  display: inline-block;
+  width: 88px;
+  height: 27px;
+  margin: 0 auto;
+  line-height: 1;
+  vertical-align: top;
+  background: url(/assets/weblogin/techin/ico_account_200221.png);
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.fieldset {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+
+.idbox {
+  width: 338px;
+  height: 38px;
+  border: hidden;
+  border-bottom: 1px solid gray;
+  color: gray;
+  width: 100%;
+  height: 48px;
+  border-width: 0 0 2px 0;
+  border-color: #ebebeb;
+  padding: 11px 70px 11px 0;
+  color: #252525;
+  outline: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  caret-color: #f7e317;
+  font-size: 14px;
+}
+
+.set_login {
+  margin-top: 25px;
+  border: 1px solid white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.loginhold {
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.loginbutton {
+  position: absolute;
+  background-color: #fbe64d;
+  width: 338px;
+  height: 50px;
+  border: hidden;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  bottom: 120px;
+  border-radius: 2%;
+}
+
+.joinpox {
+  border: 1px solid hidden;
+  width: 338px;
+  height: 18px;
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jinds {
+  border: hidden;
+  outline: none;
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+  width: auto;
+}
+
+.a23 {
+  display: flex;
+  justify-content: space-between;
+}
+.leg {
+  align-self: center;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link_kakao {
+  display: block;
+  color: #7c7c7c;
+  letter-spacing: 0;
+  border: hidden;
+  outline: none;
+  color: #7c7c7c;
+  font-size: 12px;
+  text-decoration: none;
+  width: auto;
+  font-weight: 650;
+}
+
+.KK {
+  font-size: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: #8d8d8d;
 }
