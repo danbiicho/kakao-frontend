@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import "./Navbar.scss";
 import Categories from "../../pages/Categories/Categories";
+import "./Navbar.scss";
 
 class Navbar extends Component {
   constructor() {
