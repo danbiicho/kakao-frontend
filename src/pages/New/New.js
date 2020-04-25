@@ -4,6 +4,7 @@ import NavBar from "../../components/Navbar/Navbar";
 import Menu from "../../components/Menu/Menu";
 import Banner from "../../components/Banner/Banner";
 import NewArticle from "./NewArticle/NewArticle";
+import Footer from  '../../components/Footer/Footer';
 import "./New.scss";
 
 class New extends Component {
@@ -14,6 +15,7 @@ class New extends Component {
         <Menu />
         <Banner />
         <NewArticle />
+        <Footer />
       </div>
     );
   }
