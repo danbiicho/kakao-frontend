@@ -1,0 +1,16 @@
+{
+  "itemImg": [
+    {
+      "id": 1,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200424104736890_8809681709583_AW_00.jpg"
+    },
+    {
+      "id": 2,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200424104736957_8809681709583_AW_01.jpg"
+    },
+    {
+      "id": 3,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200424104737001_8809681709583_AW_02.jpg"
+    }
+  ]
+}
