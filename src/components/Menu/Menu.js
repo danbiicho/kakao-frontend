@@ -10,26 +10,29 @@ class Menu extends Component {
     }
   }
 
-  handleClick = (id) => {
+  handleClick = (id, path) => {
     this.setState({
       activeTabId: Number(id),
-    });
+    }, () => this.props.history.push(path));
   }
 
   render() {
+    console.log(this.state.activeTabId, this.state.activeTabId)
     return (
       <div className="Menu">
         <ul className="list">
           <li>
-            <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(0) }} >홈</button>
+            <div>
+              <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick(0, '/')} >홈</button>
+            </div>
           </li>
           <li>
             <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(1) }} >신규</button>
           </li>
           <li>
-            <Link to="/Hot">
-              <button className={(this.state.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(2) }} >인기</button>
-            </Link>
+            <div>
+              <button className={(this.state.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick(2, '/Hot')} >인기</button>
+            </div>
           </li>
           <li>
             <button className={(this.state.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(3) }} >세일</button>

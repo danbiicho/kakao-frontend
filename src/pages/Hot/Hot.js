@@ -9,8 +9,10 @@ class Hot extends Component {
   render() {
     return (
       <div className="Hot">
+        {/* <div className="hotNav"> */}
         <Navbar />
         <Menu />
+        {/* </div> */}
         <div className="hotContainer">
           <HotList />
         </div>
