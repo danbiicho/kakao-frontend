@@ -17,7 +17,7 @@ class DetailPage extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/DetailPage.json")
+    fetch("http://localhost:3000/data/detailPage.json")
     .then(res => res.json())
     .then(res => {
       this.setState({
