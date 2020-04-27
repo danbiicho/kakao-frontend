@@ -24,7 +24,9 @@ class Menu extends Component {
             <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(0) }} >홈</button>
           </li>
           <li>
-            <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(1) }} >신규</button>
+          <Link to="/new">
+          <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(1) }}>신규</button>
+          </Link>
           </li>
           <li>
             <Link to="/Hot">

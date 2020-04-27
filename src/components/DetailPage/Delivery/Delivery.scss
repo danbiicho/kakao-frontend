@@ -1,0 +1,60 @@
+.Delivery {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 38px 0 10px 0;
+
+  .subject {
+    font-size: 28px;
+  }
+
+  .subjectInfo {
+    font-size: 15px;
+    margin-left: 15px;
+    color: #9a9a9e;
+    font-weight: bold;
+  }
+
+  .korDelivery {
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    margin-top: 40px;
+
+    .half {
+      width: 450px;
+      margin-right: 90px;
+    }
+
+    .nationalDelivery {
+      border-bottom: 1px solid black;
+      padding-bottom: 16px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .deliveryContents {
+      font-size: 15px;
+      ul {
+        line-height: 24px;
+        .contents {
+          margin-top: 25px;
+
+          li {
+            position: relative;
+            padding-left: 8px;
+
+            .dot {
+              position: absolute;
+              left: 0px;
+              width: 2.5px;
+              height: 2.5px;
+              background-color: rgb(51, 51, 51);
+              border-radius: 50%;
+              top: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

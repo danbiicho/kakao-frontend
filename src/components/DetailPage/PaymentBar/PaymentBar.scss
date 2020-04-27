@@ -1,0 +1,57 @@
+.PaymentBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  position: fixed;
+  height: 51px;
+  bottom: 0;
+  padding: 0;
+
+  .minus {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid rgb(227, 229, 232);
+  }
+
+  .itemCount {
+    width: 240px;
+    background-color: white;
+    border: none;
+    border-top: 1px solid rgb(227, 229, 232);
+  }
+
+  .allCost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 380px;
+    padding: 0 20px;
+    background-color: white;
+    border-top: 1px solid rgb(227, 229, 232);
+  }
+
+  .buyButton {
+    display: flex;
+    justify-content: space-between;
+    .bucket {
+      width: 55px;
+      height: 51px;
+      background-color: rgb(60, 64, 75);
+      border: 1px solid rgb(60, 64, 75);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .goRight {
+      width: 305px;
+      background-color: rgb(60, 64, 75);
+      border: 1px solid rgb(60, 64, 75);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+}
