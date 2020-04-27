@@ -1,0 +1,179 @@
+.account_comm_signup {
+}
+
+.kakaoWrap_signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mArticle_signup {
+}
+
+.c_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  height: 692px;
+}
+.footer_comm_signup {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 40px;
+  border: 0.5px solid hidden;
+  padding-top: 30px;
+}
+
+.box1_signup {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid hidden;
+  width: 520px;
+  height: 60px;
+  margin: 30px 0px 0px 0px;
+  padding: 30px 0px 0px 0px;
+  font-size: 40px;
+}
+
+.box2_signup {
+  border: 1px solid #e5e5e5;
+  width: 520px;
+  height: 592px;
+  margin: 40px 456px 40px 456px;
+  padding: 58px 69px 139px 89px;
+}
+
+.box3_signup {
+  border: 1px solid hidden;
+  width: 380px;
+  height: 391px;
+}
+
+.agee-box {
+  margin-top: 40px;
+  background-color: #f6f6f6;
+  font-size: 15px;
+  font-weight: 500;
+  width: 380px;
+  height: 50px;
+  border: hidden;
+}
+
+.tit_step {
+  margin-bottom: 44px;
+  font-size: 24px;
+  line-height: 34px;
+  color: #252525;
+  font-weight: normal;
+}
+.item_check {
+  padding-right: 40px;
+}
+
+.desc_checkall {
+  width: 380px;
+  height: 60px;
+  padding: 10px 40px 20px 28px;
+  margin: 0px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0px 2px 0 28px;
+  font-size: 12px;
+  color: #959595;
+  word-break: keep-all;
+  line-height: 140%;
+}
+
+.lab_check .ico_check {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 1px 8px 0 0;
+}
+.ico_account {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 10;
+  //   line-height: 0;
+  text-indent: -9999px;
+  vertical-align: top;
+  background-image: url(https://accounts.kakao.com/assets/weblogin/techin/retina/ico_account_200221.png);
+  background-position: -30px -30px;
+  background-size: 200px 220px;
+
+  p {
+    height: 20px;
+    line-height: 50px;
+  }
+}
+
+.ico_account_on {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 10;
+  //   line-height: 0;
+  text-indent: -9999px;
+  vertical-align: top;
+  background-image: url(https://accounts.kakao.com/assets/weblogin/techin/retina/ico_account_200221.png);
+  background-position: 0px -30px;
+  background-size: 200px 220px;
+
+  p {
+    height: 20px;
+    line-height: 50px;
+  }
+}
+
+.under-bar {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.middle-agree {
+  padding-top: 2px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  font-family: NotoSans-Regular, AppleSDGothicNeo-Regular, "맑은 고딕",
+    Malgun Gothic, "돋움", dotum, sans-serif;
+}
+
+.middle-agree-0 {
+  padding-top: 2px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  font-family: NotoSans-Regular, AppleSDGothicNeo-Regular, "맑은 고딕",
+    Malgun Gothic, "돋움", dotum, sans-serif;
+}
+
+.under-bar-up {
+  width: 380px;
+  height: 22px;
+  margin: 20px 0px 0px;
+  padding: 0px 40px 0px 0px;
+  margin-bottom: 20px;
+}
+
+.chckbox-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chckbox-list-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

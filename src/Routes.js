@@ -6,7 +6,10 @@ import New from "./pages/New/New";
 import Hot from "./pages/Hot/Hot";
 import Sale from "./pages/Sale/Sale";
 import All from "./pages/All/All";
+import SignUp from "./pages/SignUp/SignUp";
+import Join from "./pages/Join/Join";
 import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll";
+import DetailPage from "./components/DetailPage/DetailPage";
 
 class Routes extends Component {
   render() {
@@ -20,6 +23,9 @@ class Routes extends Component {
           <Route exact path="/sale" component={Sale} />
           <Route exact path="/all" component={All} />
           <Route exact path="/toyMiniDoll" component={ToyMiniDoll} />
+          <Route exact path="/signUp" component={SignUp} />
+          <Route exact path="/join" component={Join} />
+          <Route exact path="/detailPage" component={DetailPage} />
         </Switch>
       </Router>
     );
