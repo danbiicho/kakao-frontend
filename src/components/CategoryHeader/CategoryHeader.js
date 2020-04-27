@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import SelectBox from '../SelectBox';
+import SelectBox1 from '../SelectBox/SelectBox1';
+import SelectBox2 from '../SelectBox/SelectBox2';
 import '../CategoryHeader/CategoryHeader.scss';
 
 class CategoryHeader extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             active: false,
-            arrowLeft: true,
-            arrowRight: true
         }
     }
 
@@ -19,16 +18,8 @@ class CategoryHeader extends Component {
         }, () => console.log(this.state.active))
     }
 
-    handleArrowLeft = () => {
-        this.setState({
-            arrowLeft: !this.state.arrowLeft
-        }, () => console.log(this.state.arrowLeft))
-    }
+    handleOpen1 = () => {
 
-    handleArrowRight = () => {
-        this.setState({
-            arrowRight: !this.state.arrowRight
-        }, () => console.log(this.state.arrowRight))
     }
 
     render() {
@@ -49,16 +40,18 @@ class CategoryHeader extends Component {
                         </div>
                     </div>
                     <div className="listFilter">
-                        <div className="filterWrapLeft">
-                            <span>캐릭터 전체</span>
-                            <img className="leftImg" src={(this.state.arrowLeft) ? "https://t1.kakaocdn.net/friends/new_store/dropdown_down.png" : "https://t1.kakaocdn.net/friends/new_store/dropdown_up.png"} alt="img" onClick={this.handleArrowLeft} />
-                        </div>
-                        {/* <div className="filterWrapRight">
-                            <span>신상품순</span>
-                            <img className="rightImg" src={(this.state.arrowRight) ? "https://t1.kakaocdn.net/friends/new_store/dropdown_down.png" : "https://t1.kakaocdn.net/friends/new_store/dropdown_up.png"} alt="img" onClick={this.handleArrowRight} />
-                        </div> */}
-
-                        <SelectBox options={[
+                        <SelectBox1 options={[
+                            { name: '전체', src: 'https://t1.kakaocdn.net/friends/new_store/2.0/common/category_group_off.png' },
+                            { name: '라이언', src: 'https://t1.daumcdn.net/friends/prod/category/category_rion_off.png' },
+                            { name: '어피치', src: 'https://t1.daumcdn.net/friends/prod/category/category_apeach_off.png' },
+                            { name: '무지', src: 'https://t1.daumcdn.net/friends/prod/category/category_muzi_off.png' },
+                            { name: '프로도', src: 'https://t1.daumcdn.net/friends/prod/category/category_frodo_off.png' },
+                            { name: '네오', src: 'https://t1.daumcdn.net/friends/prod/category/category_neo_off.png' },
+                            { name: '튜브', src: 'https://t1.daumcdn.net/friends/prod/category/category_tube_off.png' },
+                            { name: '제이지', src: 'https://t1.daumcdn.net/friends/prod/category/category_jayz_off.png' },
+                            { name: '콘', src: 'https://t1.daumcdn.net/friends/prod/category/category_con_off.png' },
+                        ]} onClick={this.handleOpen1} />
+                        <SelectBox2 options={[
                             { name: '신상품순' },
                             { name: '판매량순' },
                             { name: '낮은 가격순' },
@@ -66,28 +59,6 @@ class CategoryHeader extends Component {
                         ]} onChange={value => {
                             console.log('바뀌었네', value);
                         }} />
-                        <SelectBox options={[
-                            { name: '캐릭터 전체' },
-                            { name: '무지' },
-                            { name: '크롱' },
-                            { name: '뽀로로' },
-                        ]} />
-                        {/* <div className="listModalBox">
-                            <ul className="molOptionWrap">
-                                <li className="listOption">
-                                    <a className="listLink" href="/">신상품순</a>
-                                </li>
-                                <li className="listOption">
-                                    <a className="listLink" href="/">판매량순</a>
-                                </li>
-                                <li className="listOption">
-                                    <a className="listLink" href="/">낮은 가격순</a>
-                                </li>
-                                <li className="listOption">
-                                    <a className="listLink" href="/">높은 가격순</a>
-                                </li>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
             </div >
