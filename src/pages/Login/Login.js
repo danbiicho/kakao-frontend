@@ -82,6 +82,7 @@ class Login extends React.Component {
                         type="password"
                         placeholder="비밀번호"
                       ></input>
+
                       <div class="set_login">
                         <button class="loginhold">V</button>
 
@@ -142,7 +143,7 @@ class Login extends React.Component {
                 이용약관
               </a>
               <a
-                class="jinds"
+                class="jinds2"
                 href="https://accounts.kakao.com/weblogin/create_account?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fclient_id%3D1737d9990c3a695cd5e7a3252b3c7003%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fstore.kakaofriends.com%252Fauth%252Fkakao%26state%3D4f89f251-5c97-4f9a-a34e-83b86c3c3cdd"
               >
                 개인정보 처리방침
