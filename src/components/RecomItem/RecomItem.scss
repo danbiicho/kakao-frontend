@@ -1,0 +1,16 @@
+.RecomItem {
+  width: 1080px;
+  margin: 0 auto;
+
+  .RecomWrap {
+    border-top: 1px solid rgb(227, 229, 232);
+    padding: 38px 0 110px;
+
+    span {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: -0.29px;
+      line-height: 28px;
+    }
+  }
+}
