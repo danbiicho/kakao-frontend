@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import '../Menu/Menu.scss';
 
 class Menu extends Component {
@@ -18,16 +18,20 @@ class Menu extends Component {
 
   render() {
     return (
-      <div class="Menu">
+      <div className="Menu">
         <ul className="list">
           <li>
             <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(0) }} >홈</button>
           </li>
           <li>
-            <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(1) }} >신규</button>
+          <Link to="/new">
+          <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(1) }}>신규</button>
+          </Link>
           </li>
           <li>
-            <button className={(this.state.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(2) }} >인기</button>
+            <Link to="/Hot">
+              <button className={(this.state.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(2) }} >인기</button>
+            </Link>
           </li>
           <li>
             <button className={(this.state.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => { this.handleClick(3) }} >세일</button>

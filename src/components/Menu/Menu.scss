@@ -1,5 +1,6 @@
 .Menu {
   .list {
+    z-index: 100;
     width: 100%;
     background-color: #ffffff;
     border-top: 1px solid rgb(237, 237, 237);
@@ -40,9 +41,9 @@
         font-family: "Apple SD Gothic Neo", AppleSDGothicNeo, "Malgun Gothic",
           "맑은 고딕", sans-serif;
         font-weight: 400;
-        // line-height: 1.5;
-        // border-bottom: 3px solid white;
+        background-color: white;
         padding-bottom: 2px;
+        background-color: white;
       }
     }
   }

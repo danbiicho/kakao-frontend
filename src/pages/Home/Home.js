@@ -1,20 +1,27 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import MainContents from "../../pages/Home/HomeComponents/MainContents/MainContents";
-import Menu from "../../components/Menu/Menu";
-import "../../styles/Reset.scss";
-import "./Home.scss";
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Categories from '../Categories/Categories';
+import Menu from '../../components/Menu/Menu';
+import MainContents from '../../pages/Home/HomeComponents/MainContents/MainContents';
+import Footer from '../../components/Footer/Footer';
+// import CategoryHeader from '../../components/CategoryHeader/CategoryHeader';
+import Hot from '../Hot/Hot';
+import '../../styles/Reset.scss';
+import './Home.scss';
+
 
 class Home extends Component {
   render() {
     return (
       <div>
         <Navbar />
+        <Categories />
         <Menu />
         <MainContents />
         <Footer />
+        {/* <CategoryHeader /> */}
+        <Hot />
       </div>
     );
   }

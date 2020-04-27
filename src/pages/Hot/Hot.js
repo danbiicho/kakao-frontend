@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import HotList from './HotList';
+import Navbar from '../../components/Navbar/Navbar';
+import Menu from '../../components/Menu/Menu';
 import './Hot.scss';
 
 class Hot extends Component {
   render() {
-    return(
-      <div>
+    return (
+      <div className="Hot">
+        <Navbar />
+        <Menu />
+        <div className="hotContainer">
+          <HotList />
+        </div>
       </div>
-    )
+    );
   }
 }
 

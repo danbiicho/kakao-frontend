@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import CategoryToy from "./CategoryToy/CategoryToy";
 import "./Categories.scss";
 
 class Categories extends Component {
@@ -31,7 +30,6 @@ class Categories extends Component {
                 <li>폰 액세서리</li>
                 <li>식품</li>
               </div>
-              <CategoryToy />
             </ul>
           </div>
         </div>
