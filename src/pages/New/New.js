@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import NavBar from "../../components/Navbar/Navbar";
 import Menu from "../../components/Menu/Menu";
-import NewBanner from "./NewBanner/NewBanner";
+import Banner from "../../components/Banner/Banner";
 import NewArticle from "./NewArticle/NewArticle";
+import Footer from  '../../components/Footer/Footer';
 import "./New.scss";
 
 class New extends Component {
@@ -12,8 +13,9 @@ class New extends Component {
       <div className="New">
         <NavBar />
         <Menu />
-        <NewBanner />
+        <Banner />
         <NewArticle />
+        <Footer />
       </div>
     );
   }

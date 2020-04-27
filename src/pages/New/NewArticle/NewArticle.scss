@@ -5,7 +5,6 @@
 
   .articleWidth {
     width: 1080px;
-    padding: 100px 0px 0px 0px;
 
     .articleLists {
       display: flex;
@@ -36,6 +35,7 @@
     }
 
     .newSubject {
+      padding: 100px 0px 0px 0px;
       .topNewSubject {
         font-size: 15px;
         color: #9a9a9e;
