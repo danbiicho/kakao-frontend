@@ -1,0 +1,115 @@
+.footer_comm_j {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 0.5px solid hidden;
+  padding-top: 0px;
+  border-top: 1px solid hidden;
+  border-bottom: 1px solid white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.box1_join {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid hidden;
+  width: auto;
+  height: 60px;
+  margin: 30px 0px 0px 0px;
+  padding: 30px 0px 0px 0px;
+  font-size: 40px;
+}
+
+.box2_join {
+  border: 1px solid #7c7c7c;
+  width: 520px;
+  height: 852px;
+  display: flex;
+  margin: 40px 456px 40px 456px;
+  padding: 58px 69px 139px 89px;
+}
+.BicBox {
+  display: flex;
+  justify-content: center;
+}
+
+.page-active {
+  display: block;
+  width: 440px;
+  height: 653px;
+  border: 1px solid blue;
+}
+.tf_required {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+  margin-top: 40px;
+}
+.lab_placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 47px;
+  line-height: 47px;
+  color: #ccc;
+}
+.lab_g {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  font-size: 15px;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+
+.ebox_join {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 47px;
+  line-height: 47px;
+  color: #ccc;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4c4c4c;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: NotoSans-Regular, AppleSDGothicNeo-Regular, "맑은 고딕",
+    Malgun Gothic, "돋움", dotum, sans-serif;
+  letter-spacing: -0.03em;
+  word-wrap: break-word;
+}
+
+.wrap_btn2 {
+  overflow: hidden;
+  margin: 15px 0 40px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.info_error {
+  margin-top: 10px;
+  color: #e65f3e;
+  font-size: 13px;
+}
+
+.btn_g {
+  display: inline-block;
+  height: 42px;
+  padding: 0 31px;
+  color: #252525;
+  border: 1px solid #adadad;
+  border-radius: 30px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
