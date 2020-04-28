@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Pagination from "../../components/Pagination/Pagination";
 import "./ItemLists.scss";
 
 class ItemLists extends Component {
@@ -52,7 +51,6 @@ class ItemLists extends Component {
     return (
       <>
         <ul className="ItemLists">{itemLists}</ul>
-        <Pagination />
       </>
     );
   }

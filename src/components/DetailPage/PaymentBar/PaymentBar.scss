@@ -15,6 +15,18 @@
     justify-content: center;
     background-color: white;
     border: 1px solid rgb(227, 229, 232);
+
+    .disabled {
+      background-image: url("https://t1.kakaocdn.net/friends/new_store/2.0/common/product-detail-button-dec-off.svg");
+      width: 11px;
+      height: 2px;
+    }
+
+    .abled {
+      background-image: url("https://t1.kakaocdn.net/friends/new_store/2.0/common/product-detail-button-dec-on.svg");
+      width: 11px;
+      height: 2px;
+    }
   }
 
   .itemCount {
@@ -22,6 +34,7 @@
     background-color: white;
     border: none;
     border-top: 1px solid rgb(227, 229, 232);
+    font-weight: bold;
   }
 
   .allCost {
@@ -32,6 +45,17 @@
     padding: 0 20px;
     background-color: white;
     border-top: 1px solid rgb(227, 229, 232);
+
+    .itemCost {
+      font-size: 13px;
+      font-weight: bold;
+      color: #9a9a9e;
+    }
+
+    .cost {
+      font-size: 15px;
+      font-weight: bold;
+    }
   }
 
   .buyButton {
