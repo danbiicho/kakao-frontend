@@ -1,0 +1,25 @@
+{
+  "SaleCard": [
+    {
+      "url": "https://t1.kakaocdn.net/friends/prod/sale/20200427101704_SALE_1.jpg?type=thumb&opt=R330x330@2x",
+      "name": "트와이스에디션 얼굴쿠션_라이언",
+      "percent": "20%",
+      "saleCost": 20000,
+      "originCost": 25000
+    },
+    {
+      "url": "https://t1.kakaocdn.net/friends/prod/sale/20200427101704_SALE_2.jpg?type=thumb&opt=R330x330@2x",
+      "name": "프렌즈가든 거울키링-어피치",
+      "percent": "47%",
+      "saleCost": 20000,
+      "originCost": 25000
+    },
+    {
+      "url": "https://t1.kakaocdn.net/friends/prod/sale/20200427101704_SALE_3.jpg?type=thumb&opt=R330x330@2x",
+      "name": "트와이스에디션 얼굴쿠션_라이언",
+      "percent": "20%",
+      "saleCost": 20000,
+      "originCost": 25000
+    }
+  ]
+}

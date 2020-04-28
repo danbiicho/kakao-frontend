@@ -1,0 +1,70 @@
+.SaleComponent {
+  width: 1120px;
+  margin: 60px auto 0;
+  padding: 112px 20px 160px;
+  display: flex;
+  flex-direction: column;
+
+  .saleTop {
+    display: flex;
+    justify-content: space-between;
+    .Card {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+      border-radius: 6px;
+
+      .saleImg {
+        width: 330px;
+        height: 330px;
+      }
+
+      .saleInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 19px 20px;
+        height: 95px;
+        justify-content: space-around;
+        .itemName {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .itemCost {
+          display: flex;
+          position: relative;
+          align-items: baseline;
+          .saleCost {
+            font-weight: bold;
+            font-size: 22px;
+            color: rgb(255, 68, 127);
+          }
+          .won1 {
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(255, 68, 127);
+          }
+          .originCost {
+            font-size: 15px;
+            letter-spacing: -0.25px;
+            color: rgb(154, 154, 158);
+            margin-left: 6px;
+            text-decoration: line-through;
+          }
+          .won2 {
+            font-size: 14px;
+            letter-spacing: -0.25px;
+            color: rgb(154, 154, 158);
+            text-decoration: line-through;
+          }
+
+          .bucket {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            right: 0;
+            top: -20px;
+          }
+        }
+      }
+    }
+  }
+}
