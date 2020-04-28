@@ -8,29 +8,22 @@ class PaymentBar extends Component {
       itemNum: 1,
     }
   }
-
-  handlePlus = () => {
+  
+  handleCount = (num) => {
+    if(this.state.itemNum === 1 && num === -1) return;
     this.setState({
-      itemNum : this.state.itemNum + 1
+      itemNum : this.state.itemNum + num
     })
-  }
-
-  handleMinus = () => {
-    if(this.state.itemNum > 1) {
-      this.setState({
-        itemNum : this.state.itemNum - 1
-      })
-    }
   }
 
   render() {
     return(
       <div className="PaymentBar">
-        <button className="minus" onClick={this.handleMinus}>
+        <button className="minus" onClick={() => this.handleCount(-1)}>
           <img className={(this.state.itemNum === 1) ? "disabled" : "abled"} alt=""/>
         </button>
         <button className="itemCount">{this.state.itemNum}</button>
-        <button className="minus" onClick={this.handlePlus}>
+        <button className="minus" onClick={() => this.handleCount(1)}>
           <img src="https://t1.kakaocdn.net/friends/new_store/2.0/common/product-detail-button-inc-on.svg" alt=""/>
         </button>
         <div className="allCost">
