@@ -1,0 +1,81 @@
+@import "../../styles/Common.scss";
+.AllList {
+  width: 255px;
+  height: 382px;
+  //   border: 1px solid red;
+  margin-right: 20px;
+
+  .allWrap {
+    z-index: 0;
+    width: 255px;
+    margin-right: 20px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+
+    .allImg {
+      z-index: 0;
+      border-radius: 6px;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+    }
+    .allImg::after {
+      z-index: 0;
+      position: absolute;
+      content: "";
+      width: 100%;
+      z-index: 0;
+      padding-top: 100%;
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .allItemTitle {
+      width: 220px;
+      line-height: 20px;
+      margin: 10px 0px 5px;
+      font-size: 16px;
+      letter-spacing: -0.23px;
+      color: #777777;
+      font-family: $font-SFPro;
+    }
+
+    .allItemCost {
+      font-size: 16px;
+      letter-spacing: -0.25px;
+      line-height: 20px;
+      font-family: $font-SFPro;
+      font-weight: 700;
+    }
+
+    .opacityWrap {
+      position: absolute;
+      width: 255px;
+      height: 255px;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .allItemLabel {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      .itemLabel {
+        height: 22px;
+        width: 22px;
+        line-height: 22px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 2px;
+        background: rgb(30, 30, 30);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
