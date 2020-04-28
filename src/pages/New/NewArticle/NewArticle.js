@@ -16,18 +16,16 @@ class NewArticle extends Component {
         this.setState(
           {
             datas: res.item1,
-          },
-          () => console.log(this.state.datas)
-        );
+          });
       });
   };
 
   render() {
     const { datas } = this.state;
 
-    const itemLists = datas.map((data) => {
+    const itemLists = datas.map((data, index) => {
       return (
-        <li className="itemListWrap">
+        <li key={index} className="itemListWrap">
           <div className="itemListWrap">
             <img className="item" src={data.src} alt="" />
               <div className="itemSubject">
