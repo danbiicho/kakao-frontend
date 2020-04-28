@@ -22,7 +22,7 @@ class Routes extends Component {
           <Route exact path="/hot" component={Hot} />
           <Route exact path="/sale" component={Sale} />
           <Route exact path="/all" component={All} />
-          <Route exact path="/toyMiniDoll" component={ToyMiniDoll} />
+          <Route exact path="/toyminidoll" component={ToyMiniDoll} />
           <Route exact path="/signUp" component={SignUp} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/detailPage" component={DetailPage} />

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import NavBar from "../Navbar/Navbar";
 import DetailArticle from "./DetailArticle/DetailArticle";
+import RecomItem from "../RecomItem/RecomItem";
+import RecentlyItem from "../RecentlyItem/RecentlyItem";
 import Footer from "../Footer/Footer";
 import PaymentBar from "./PaymentBar/PaymentBar";
 import "slick-carousel/slick/slick.css";
@@ -22,7 +24,7 @@ class DetailPage extends Component {
     .then(res => {
       this.setState({
         datas: res.itemImg
-      }, () => {console.log('fetch', this.state.datas)})
+      })
     })
   }
 
@@ -40,7 +42,7 @@ class DetailPage extends Component {
     const { datas } = this.state;
 
     const itemImg = datas.map((data) => {
-      return <img src={data.src} alt=""/>
+      return <img key="" src={data.src} alt=""/>
     })
     return (
       <div className="DetailPage">
@@ -64,15 +66,17 @@ class DetailPage extends Component {
             <span>17,000</span><span>원</span>
           </div>
           <div className="starImg">
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <span>(4)</span>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <span>(0)</span>
           </div>
         </div>
         <DetailArticle />
+        <RecomItem />
+        <RecentlyItem />
         <Footer />
         <PaymentBar />
       </div>
