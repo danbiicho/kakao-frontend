@@ -18,8 +18,6 @@ class Home extends Component {
         <Menu />
         <MainContents />
         <Footer />
-        {/* <CategoryHeader /> */}
-        <Hot />
       </div>
     );
   }
