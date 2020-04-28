@@ -1,0 +1,52 @@
+{
+  "Category": [
+    {
+      "name": "전체"
+    },
+    {
+      "id": 1,
+      "name": "테마 기획전",
+      "url": "https://t1.daumcdn.net/friends/prod/category/200310_category_babydreaming_W.jpg"
+    },
+    {
+      "name": "토이",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_toy_W.jpg"
+    },
+    {
+      "name": "리빙",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_living_W.jpg"
+    },
+    {
+      "name": "잡화",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_Accessory_W.jpg"
+    },
+    {
+      "name": "문구",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_Stationery_W.jpg"
+    },
+    {
+      "name": "의류",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_Apparel_W1.jpg"
+    },
+    {
+      "name": "파자마",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_pajamas_W2.jpg"
+    },
+    {
+      "name": "여행/레져",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_leisure_W.jpg"
+    },
+    {
+      "name": "생활테크",
+      "url": "https://t1.daumcdn.net/friends/prod/category/1004_category_Electronic_W.jpg"
+    },
+    {
+      "name": "폰 액세서리",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_phone_W.jpg"
+    },
+    {
+      "name": "식품",
+      "url": "https://t1.daumcdn.net/friends/prod/category/category_food_W.jpg"
+    }
+  ]
+}

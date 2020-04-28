@@ -45,8 +45,7 @@ class Menu extends Component {
             </div>
           </li>
           <li>
-            <button className={(this.state.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/Sale')} >세일</button>
-          </li>
+            <button className={(this.state.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/Sale')} >세일</button> </li>
           <li>
             <button className={(this.state.activeTabId === 4) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/All')} >전체</button >
           </li>
