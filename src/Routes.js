@@ -10,6 +10,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Join from "./pages/Join/Join";
 import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll";
 import DetailPage from "./components/DetailPage/DetailPage";
+import "./styles/Common.scss"
 
 class Routes extends Component {
   render() {
