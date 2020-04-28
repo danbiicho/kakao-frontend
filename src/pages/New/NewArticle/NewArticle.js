@@ -3,6 +3,23 @@ import ItemLists from "../../../components/ItemLists/ItemLists";
 import "./NewArticle.scss";
 
 class NewArticle extends Component {
+  constructor() {
+    super();
+    this.state = {
+      datas: [],
+    };
+  }
+
+  componentDidMount = () => {
+    fetch("http://localhost:3000/data/itemLists.json")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState(
+          {
+            datas: res.item1,
+          });
+      });
+  };
   render() {
     return (
       <div className="NewArticle">

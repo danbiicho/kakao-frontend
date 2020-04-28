@@ -1,12 +1,26 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      datas: [],
+    };
   }
+
+  componentDidMount = () => {
+    fetch(`${API}/categories`)
+    .then((res) => res.json())
+    .then((res) => {
+      this.setState({
+        datas: res.Category
+      })
+    })
+  }
+
   render() {
     return (
       <div className="Categories">
@@ -17,18 +31,9 @@ class Categories extends Component {
           >
             <ul className="categoryMenuUl">
               <div className="categoryList1">
-                <li>전체</li>
-                <li>테마 기획전</li>
-                <li>토이</li>
-                <li>리빙</li>
-                <li>잡화 </li>
-                <li>문구</li>
-                <li>의류</li>
-                <li>파자마</li>
-                <li>여행/레져</li>
-                <li>생활테크</li>
-                <li>폰 액세서리</li>
-                <li>식품</li>
+                {this.state.datas.map( (data) => {
+                  return <li>{data.name}</li>
+                  })}
               </div>
             </ul>
           </div>
