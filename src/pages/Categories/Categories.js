@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { name1 } from "../../config";
+import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
@@ -12,7 +12,7 @@ class Categories extends Component {
   }
 
   componentDidMount = () => {
-    fetch(name1)
+    fetch(`${API}/categories`)
     .then((res) => res.json())
     .then((res) => {
       this.setState({
