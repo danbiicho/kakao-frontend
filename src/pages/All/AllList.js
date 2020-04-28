@@ -26,8 +26,14 @@ class AllList extends Component {
                 <div className="AllList">
                     <li className="allWrap">
                         <img class="allImg" src={data.src} alt="img" />
-                        <p className="allItemTitle">{data.name}</p>
+                        <p className="allItemTitle">{data.name}
+
+                            <span className="allCartButton">
+                                <button className="allcartImg"></button>
+                            </span>
+                        </p>
                         <span className="allItemCost">{data.cost}</span>
+
                         <div className="opacityWrap"></div>
                         <div className="allItemLabel">
                             <span className="itemLabel">

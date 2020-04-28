@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import InfoBlock from '../../components/CategoryHeader/InfoBlock';
-import CheckBox from '../../components/CategoryHeader/CheckBox';
+import InfoBlock from './InfoBlock';
+import CheckBox from './CheckBox';
 import SelectBox1 from '../SelectBox/SelectBox1';
 import SelectBox2 from '../SelectBox/SelectBox2';
 import '../CategoryHeader/CategoryHeader.scss';
