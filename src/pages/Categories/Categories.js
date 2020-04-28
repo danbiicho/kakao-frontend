@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { name1 } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
@@ -11,7 +12,7 @@ class Categories extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/category.json")
+    fetch(name1)
     .then((res) => res.json())
     .then((res) => {
       this.setState({
