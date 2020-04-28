@@ -21,11 +21,6 @@ class Categories extends Component {
   }
 
   render() {
-    const { datas } = this.state;
-
-    const categoryMenu = datas.map( (data) => {
-    return <li>{data.name}</li>
-    })
     return (
       <div className="Categories">
         <div className="categoriesHover">
@@ -35,7 +30,9 @@ class Categories extends Component {
           >
             <ul className="categoryMenuUl">
               <div className="categoryList1">
-                {categoryMenu}
+                {this.state.datas.map( (data) => {
+                  return <li>{data.name}</li>
+                  })}
               </div>
             </ul>
           </div>
