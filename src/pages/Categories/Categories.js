@@ -5,9 +5,27 @@ import "./Categories.scss";
 class Categories extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      datas: [],
+    };
   }
+
+  componentDidMount = () => {
+    fetch("http://localhost:3000/data/category.json")
+    .then((res) => res.json())
+    .then((res) => {
+      this.setState({
+        datas: res.Category
+      })
+    })
+  }
+
   render() {
+    const { datas } = this.state;
+
+    const categoryMenu = datas.map( (data) => {
+    return <li>{data.name}</li>
+    })
     return (
       <div className="Categories">
         <div className="categoriesHover">
@@ -16,19 +34,8 @@ class Categories extends Component {
             onMouseLeave={this.props.onMouseLeave}
           >
             <ul className="categoryMenuUl">
-              <div class="categoryList1">
-                <li>전체</li>
-                <li>테마 기획전</li>
-                <li>토이</li>
-                <li>리빙</li>
-                <li>잡화 </li>
-                <li>문구</li>
-                <li>의류</li>
-                <li>파자마</li>
-                <li>여행/레져</li>
-                <li>생활테크</li>
-                <li>폰 액세서리</li>
-                <li>식품</li>
+              <div className="categoryList1">
+                {categoryMenu}
               </div>
             </ul>
           </div>

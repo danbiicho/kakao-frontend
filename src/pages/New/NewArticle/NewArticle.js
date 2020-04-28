@@ -16,9 +16,7 @@ class NewArticle extends Component {
         this.setState(
           {
             datas: res.item1,
-          },
-          () => console.log(this.state.datas)
-        );
+          });
       });
   };
 
