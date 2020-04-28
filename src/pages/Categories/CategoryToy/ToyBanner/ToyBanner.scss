@@ -1,0 +1,14 @@
+.ToyBanner {
+  width: 1080px;
+  margin: 66px auto 0;
+  position: relative;
+
+  .bannerName {
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    left: 30px;
+    top: 90px;
+  }
+}

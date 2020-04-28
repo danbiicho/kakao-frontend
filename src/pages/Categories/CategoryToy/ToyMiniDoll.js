@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import NavBar from "../../../components/Navbar/Navbar";
-import Menu from '../../../components/Menu/Menu';
-import Banner from '../../../components/Banner/Banner';
+import ToyBanner from './ToyBanner/ToyBanner';
 import CategoryLists from "../../../components/CategoryLists/CategoryLists";
 import Footer from "../../../components/Footer/Footer";
 import ItemLists from "../../../components/ItemLists/ItemLists";
@@ -13,8 +12,7 @@ class ToyMiniDoll extends Component {
     return (
       <div className="ToyMiniDoll">
         <NavBar />
-        <Menu />
-        <Banner />
+        <ToyBanner />
         <CategoryLists />
         <ItemLists />
         <Footer />
