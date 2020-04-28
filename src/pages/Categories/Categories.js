@@ -16,7 +16,7 @@ class Categories extends Component {
             onMouseLeave={this.props.onMouseLeave}
           >
             <ul className="categoryMenuUl">
-              <div class="categoryList1">
+              <div className="categoryList1">
                 <li>전체</li>
                 <li>테마 기획전</li>
                 <li>토이</li>
