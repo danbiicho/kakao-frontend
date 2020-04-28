@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
-import Categories from '../Categories/Categories';
 import Menu from '../../components/Menu/Menu';
 import MainContents from '../../pages/Home/HomeComponents/MainContents/MainContents';
 import Footer from '../../components/Footer/Footer';
@@ -16,12 +15,9 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
-        <Categories />
         <Menu />
         <MainContents />
         <Footer />
-        {/* <CategoryHeader /> */}
-        <Hot />
       </div>
     );
   }
