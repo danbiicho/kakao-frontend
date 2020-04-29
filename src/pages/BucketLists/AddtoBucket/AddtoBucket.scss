@@ -1,0 +1,154 @@
+.AddtoBucket {
+  width: 1080px;
+  margin: 0 auto;
+  .firstRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    .leftEnd {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      .checkIcon {
+        width: 25px;
+        margin-right: 10px;
+      }
+    }
+
+    .rightEnd {
+      display: flex;
+      align-items: center;
+      color: rgb(102, 102, 102);
+      font-weight: bold;
+
+      .selectItem {
+        padding-right: 8px;
+      }
+      .trash {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .secRow {
+    display: flex;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 1080px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(227, 229, 232);
+    .itemName {
+      margin-left: 130px;
+      width: 157px;
+      text-align: center;
+    }
+
+    .option {
+      display: flex;
+      margin-left: 160px;
+      width: 157px;
+      text-align: center;
+    }
+
+    .itemCount {
+      display: flex;
+      margin-left: 50px;
+      width: 157px;
+      justify-content: center;
+    }
+
+    .itemCost {
+      display: flex;
+      margin-right: 50px;
+      width: 157px;
+      justify-content: center;
+    }
+  }
+
+  .lastRow {
+    width: 1080px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    height: 171px;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 86.5px 0 33px;
+    margin-bottom: 51px;
+    align-items: center;
+
+    .lastRowLeft {
+      position: relative;
+      span {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      select {
+        width: 199px;
+        height: 31px;
+        margin-left: 26px;
+        border-color: rgb(227, 229, 232);
+        padding: 0px 2px 1px 11px;
+        background: url("https://t1.kakaocdn.net/friends/new_store/dropdown_down.png")
+          no-repeat 95% 50%;
+        background-size: 18px;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        background-color: white;
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  .addAllCost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: bold;
+    width: 480.25px;
+    height: 135px;
+    .itemCost {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 9px;
+      .costName {
+        font-size: 15px;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .deliveryCost {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 9px;
+      .deliveryName {
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+    .allCost {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 9px;
+      .allCostName {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+}
