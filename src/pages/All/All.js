@@ -13,7 +13,6 @@ class All extends Component {
       <div className="All">
         <Navbar />
         <Menu />
-
         <div className="allContainer">
           <CategoryHeader />
           <div className="allListContainer">

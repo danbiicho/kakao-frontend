@@ -19,12 +19,11 @@ class SelectBox1 extends Component {
     }
 
     select = i => {
-        // console.log(i);
         this.setState({
             select: i,
             open1: false,
         });
-        // this.props.onChange(this.props.options[i])
+        // this.props.onChange(this.props.options[i]) 이건 필요합니다!
     }
 
     handleMouseOver = (index) => {
@@ -39,8 +38,7 @@ class SelectBox1 extends Component {
         })
     }
 
-    checkActive = (el, i) => { // 해당 요소가 선택되었는지, 또는 호버 되었는지 체크하는 함수.
-        // console.log({ state: this.state.choosenFriend, i })
+    checkActive = (el, i) => { // 해당 요소가 선택되었는지, 또는 호버 되었는지 체크하는 함수.        
         if (i === this.state.select) return 2; // 선택
         if (i === this.state.choosenFriend) return 1; // 호버
         return 0;
@@ -51,7 +49,7 @@ class SelectBox1 extends Component {
     render() {
         const { options } = this.props;
         const { open1, select } = this.state;
-        // console.log(options.map(({ src, srcChange, ...rest }) => rest))
+        // console.log(options.map(({ src, srcChange, ...rest }) => rest)) 이건 필요합니다!
         return (
             <div className="SelectBox1">
                 <div className="imgOuter" onClick={this.handleOpen1} status="false">
@@ -80,10 +78,7 @@ class SelectBox1 extends Component {
                                     className="imgList"
                                     src={this.checkActive(el, i) ? el.srcChange : el.src}
                                     alt="img"
-                                // onMouseOver={() => this.handleMouseOver(el.name)} onMouseLeave={this.handleMouseLeave}
                                 />
-
-                                {/* this.state.click === el.name ? el.src : el.srcChange  */}
                                 <div className="listName">
                                     <span className="listLink">
                                         {el.name}

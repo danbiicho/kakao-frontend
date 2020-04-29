@@ -19,6 +19,7 @@ class AllList extends Component {
             });
     }
 
+
     render() {
         const { datas } = this.state;
         return (
