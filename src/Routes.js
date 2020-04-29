@@ -11,6 +11,7 @@ import Join from "./pages/Join/Join";
 import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll";
 import DetailPage from "./components/DetailPage/DetailPage";
 import BucketLists from "./pages/BucketLists/BucketLists";
+import "./styles/Common.scss"
 
 class Routes extends Component {
   render() {
