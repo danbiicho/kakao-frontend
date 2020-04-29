@@ -1,0 +1,20 @@
+.Home {
+  position: relative;
+  .goTopButton {
+    // position: absolute;
+    position: fixed;
+    z-index: 1000;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    bottom: 13px;
+    right: 13px;
+    display: block;
+    box-sizing: border-box;
+    background-size: 10%;
+    border-radius: 50%;
+    border: 1px solid rgb(198, 198, 198);
+    background: url(https://t1.kakaocdn.net/friends/kfo-common/mo/m640/ico_top.png)
+      center center / 1.4vw no-repeat rgba(255, 255, 255, 0.9);
+  }
+}
