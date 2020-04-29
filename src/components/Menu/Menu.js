@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import '../Menu/Menu.scss';
 
+const obj = {
+  "/New": 1,
+  "/Hot": 2,
+  "/Sale": 3,
+  "/All": 4
+};
+
 class Menu extends Component {
   constructor(props) {
     super(props);
@@ -11,14 +18,8 @@ class Menu extends Component {
   }
 
   componentDidMount = () => {
-    // console.log("Menu CDM url : ", this.props.history.location.pathname);
     let currentPath = this.props.history.location.pathname;
-
-    if (currentPath === "/") return;
-    if (currentPath === "/New") this.setState({ activeTabId: 1 });
-    if (currentPath === "/Hot") this.setState({ activeTabId: 2 });
-    if (currentPath === "/Sale") this.setState({ activeTabId: 3 });
-    if (currentPath === "/All") this.setState({ activeTabId: 4 });
+    this.setState({ activeTabId: obj[currentPath] });
   }
 
   handleClick = (path) => {

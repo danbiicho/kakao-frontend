@@ -1,76 +1,64 @@
 {
   "allListItem": [
     {
-      "rank": "1",
       "name": "죠르디사과에어팟케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183342573_8809681709576_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "2",
       "name": "죠르디사과버즈케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183322690_8809681709590_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "3",
       "name": "죠르디사과 에어팟프로케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200424104736890_8809681709583_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "4",
       "name": "볼빵빵말랑쿠션 죠르디",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200402180112711_8809681708104_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "22000"
+      "cost": 22000
     },
     {
-      "rank": "5",
       "name": "죠르디사과에어팟케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183342573_8809681709576_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "6",
       "name": "죠르디사과버즈케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183322690_8809681709590_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "7",
       "name": "죠르디사과 에어팟프로케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200424104736890_8809681709583_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "8",
       "name": "볼빵빵말랑쿠션 죠르디",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200402180112711_8809681708104_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "22000"
+      "cost": 22000
     },
     {
-      "rank": "9",
       "name": "죠르디사과에어팟케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183342573_8809681709576_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "10",
       "name": "죠르디사과버즈케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200423183322690_8809681709590_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "11",
       "name": "죠르디사과 에어팟프로케이스",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200424104736890_8809681709583_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "17000"
+      "cost": 17000
     },
     {
-      "rank": "12",
       "name": "볼빵빵말랑쿠션 죠르디",
       "src": "https://t1.daumcdn.net/friends/prod/product/20200402180112711_8809681708104_AW_00.jpg?type=thumb&opt=R255x255@2xa",
-      "cost": "22000"
+      "cost": 22000
     }
   ]
 }
