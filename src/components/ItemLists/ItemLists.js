@@ -6,6 +6,8 @@ class ItemLists extends Component {
     super();
     this.state = {
       datas: [],
+      idx: [],
+      clicked: false
     };
   }
 
@@ -17,24 +19,32 @@ class ItemLists extends Component {
           {
             datas: res.item1,
           },
-          () => console.log(this.state.datas)
         );
       });
   };
 
+  handleCart = (i) => {
+    this.state.idx.push(i)
+    this.setState({
+      clicked: true
+    })
+  }
+
   render() {
     const { datas } = this.state;
 
-    const itemLists = datas.map((data) => {
+    const itemLists = datas.map((data, index) => {
       return (
-        <li className="itemListWrap">
+        <li key={index} className="itemListWrap">
           <div className="itemListWrap">
             <img className="item" src={data.src} alt="" />
             <div className="itemSubject">
               <p className="topItemSubject">{data.name}</p>
-              <img
-                className="buyImg"
-                src="https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png"
+              <div
+                key={data.id}
+                className={this.state.idx.indexOf(data.id) !== -1 && this.state.clicked? 'buyImgAble' : 'buyImgDisable'}
+                {...console.log(this.state.idx.indexOf(data.id))}
+                onClick={() => this.handleCart(data.id)}
                 alt=""
               />
             </div>

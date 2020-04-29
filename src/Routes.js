@@ -10,6 +10,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Join from "./pages/Join/Join";
 import ToyMiniDoll from "./pages/Categories/CategoryToy/ToyMiniDoll";
 import DetailPage from "./components/DetailPage/DetailPage";
+import BucketLists from "./pages/BucketLists/BucketLists";
 import "./styles/Common.scss"
 
 class Routes extends Component {
@@ -27,6 +28,7 @@ class Routes extends Component {
           <Route exact path="/signUp" component={SignUp} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/detailPage" component={DetailPage} />
+          <Route exact path="/bucketLists" component={BucketLists}/>
         </Switch>
       </Router>
     );
