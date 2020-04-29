@@ -40,15 +40,9 @@ class Home extends Component {
         ticking = false;
         console.log(this.nav.current.style.top);
 
-        if (lastScrollY > 600) {
-          this.setState({
-            topButton: true,
-          })
-        } else {
-          this.setState({
-            topButton: false,
-          })
-        }
+        this.setState({
+          topButton: (lastScrollY > 600),
+        })
       });
 
       ticking = true;

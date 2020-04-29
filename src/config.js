@@ -1,3 +1,1 @@
-const name = "http://10.58.5.122:8000"
-
-export const API = name
+export const API = "http://10.58.5.133:8000"

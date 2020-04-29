@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './HotList.scss';
+import { API } from '../../config';
 
 class HotList extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class HotList extends Component {
     }
 
     componentDidMount = () => {
-        fetch("http://localhost:3000/data/HotLists.json")
+        fetch(`${API}/data/HotLists.json`)
             .then((res) => res.json())
             .then((res) => {
                 this.setState({
@@ -31,12 +32,16 @@ class HotList extends Component {
             });
     }
 
-    addData = () => {
-        console.log("200, ok");
+    handleClick = (e) => {
+        this.setState({
+            currentPage: Number(e.target.id)
+        });
     }
 
     render() {
         const { datas } = this.state;
+        // const { datas, currentPage, }
+
         return (
             <>
                 {datas.map((data, i) => (
