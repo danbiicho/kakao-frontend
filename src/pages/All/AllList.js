@@ -23,10 +23,10 @@ class AllList extends Component {
     render() {
         const { datas } = this.state;
         return (
-            datas.map((data) => (
+            datas.map((data, index) => (
                 <div className="AllList">
                     <li className="allWrap">
-                        <img class="allImg" src={data.src} alt="img" />
+                        <img className="allImg" src={data.src} alt="img" />
                         <p className="allItemTitle">{data.name}
 
                             <span className="allCartButton">
