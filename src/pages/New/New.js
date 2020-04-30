@@ -11,7 +11,6 @@ class New extends Component {
       <div className="New">
         <Banner />
         <NewArticle />
-        <Footer />
       </div>
     );
   }
