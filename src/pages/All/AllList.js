@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AllList.scss';
+import { API } from '../../config';
 
 class AllList extends Component {
     constructor(props) {
@@ -10,11 +11,11 @@ class AllList extends Component {
     }
 
     componentDidMount = () => {
-        fetch("http://localhost:3000/data/AllLists.json")
+        fetch(`${API}/product?sort_by=hot`)
             .then((res) => res.json())
             .then((res) => {
                 this.setState({
-                    datas: res.allListItem,
+                    datas: res.hot_product,
                 });
             });
     }
@@ -26,21 +27,16 @@ class AllList extends Component {
             datas.map((data, index) => (
                 <div className="AllList">
                     <li className="allWrap">
-                        <img className="allImg" src={data.src} alt="img" />
+                        <img className="allImg" src={data.image_url} alt="img" />
                         <p className="allItemTitle">{data.name}
 
                             <span className="allCartButton">
                                 <button className="allcartImg"></button>
                             </span>
                         </p>
-                        <span className="allItemCost">{data.cost}</span>
+                        <span className="allItemCost">{data.price}</span>
 
                         <div className="opacityWrap"></div>
-                        <div className="allItemLabel">
-                            <span className="itemLabel">
-                                {data.rank}
-                            </span>
-                        </div>
                     </li>
                 </div>
             ))
