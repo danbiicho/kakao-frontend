@@ -7,7 +7,8 @@ class NewArticle extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      itemId: [],
+      items:[],
+      selectItem:[],
     }
   }
 
@@ -22,11 +23,11 @@ class NewArticle extends Component {
      });
   };
 
-  getItemID = (id) => {
-    this.setState({
-      itemId: id
-    })
-  }
+  //getItemID = (id) => {
+  //  this.setState({
+  //    selectItem: id
+  //  })
+  //}
 
 
   render() {
@@ -38,7 +39,7 @@ class NewArticle extends Component {
             <p className="bottomNewSubject">베이비 드리밍</p>
           </div>
           <ul className="articleLists">
-            <ItemLists itemId={this.getItemID()}/>
+            <ItemLists items={this.state.items.slice(0, 8)}/>
           </ul>
           <div className="addItemsWith">
             <div className="addItems">
@@ -53,7 +54,7 @@ class NewArticle extends Component {
             <p className="topNewSubject">오늘 업데이트 했어요</p>
             <p className="bottomNewSubject">새로운 친구들</p>
           </div>
-          <ul className="articleLists"><ItemLists/></ul>
+          <ul className="articleLists"><ItemLists items={this.state.items.slice(9, 17)}/></ul>
         </div>
       </div>
     );

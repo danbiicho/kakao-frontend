@@ -15,7 +15,7 @@ class SaleItemLists extends Component {
    fetch(`${API}/product/saleProduct`)
    .then((res) => res.json())
    .then((res) => {
-     this.setState({
+     this.setState({ 
        items: res.sale_item
      })
    })

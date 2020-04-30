@@ -35,15 +35,6 @@ class DetailPage extends Component {
     .then(res => this.setState({itemInfo: res.information[0]}, ()=> console.log('asdfasf', this.state.itemInfo)))
   }
 
-  componentDidMount = () => {
-    console.log('11111')
-  }
-
-  componentDidUpdate = () => {
-    console.log('2222')
-  }
-
-
   render() {
     const settings = {
       dots: true,

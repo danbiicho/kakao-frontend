@@ -1,29 +1,16 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./InnerCategory.scss";
 
 class InnerCategory extends Component {
-  constructor() {
-    super()
-    this.state = {
-      datas: [],
-    }
-  }
-
-  componentDidMount = () => {
-    fetch("http://localhost:3000/data/InnerCategory.json")
-    .then( res => res.json())
-    .then( res => {
-      this.setState({
-        datas: res.toy
-      })
-    })
-  }
-
   render() {
-    const { datas } = this.state;
+    const { InnerCategories } = this.props;
     return(
       <div className="InnerCategory">
-        {datas.map( data => { return (<li>{data}</li>)})}
+        {InnerCategories.map( category => (
+          <Link to="/products/category/subject"><li>{category.name}</li></Link>
+        )
+        )}
       </div>
     )
   }

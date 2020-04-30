@@ -42,7 +42,7 @@ class HotList extends Component {
         // const { datas, currentPage, }
 
         return (
-            <>
+            <div className="HotList">
                 {datas.map((data, i) => (
                     <div className="hotWrap">
                         <img className="hotImg" src={data.src} alt="img" />
@@ -59,7 +59,7 @@ class HotList extends Component {
                     </div>
 
                 </div>
-            </>
+            </div>
         );
     }
 }

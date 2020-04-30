@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { API } from "../../../../config";
 import "./SaleComponent.scss";
 
 class SaleComponent extends Component {
@@ -10,7 +11,7 @@ class SaleComponent extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://10.58.5.133:8000/product/mainSaleProduct")
+    fetch(`${API}/product/mainSaleProduct`)
     .then((res) => res.json())
     .then((res) => {
       this.setState({
@@ -21,19 +22,19 @@ class SaleComponent extends Component {
 
   render() {
     const { items } = this.state;
-    const SaleCards = items.map((data) => {
+    const SaleCards = items.map((item) => {
       return (
         <div className="Card">
-          <img className="saleImg" src={data.image_url} alt=""/>
+          <img className="saleImg" src={item.image_url} alt=""/>
           <div className="saleInfo">
-            <div className="itemName">{data.name}</div>
+            <div className="itemName">{item.name}</div>
             <div className="itemCost">
               <div>
-                <span className="saleCost">{data.discount_percentage} {data.discount_percentage * data.price * 0.01}</span>
+                <span className="saleCost">{Math.floor(item.discount_percentage)}% {(Math.floor((item.price - (item.discount_percentage * item.price * 0.01))/100)*100).toLocaleString()}</span>
                 <span className="won1">원</span>
               </div>
               <div>
-                <span className="originCost">{data.price}</span>
+                <span className="originCost">{item.price}</span>
                 <span className="won2">원</span>
               </div>
               <img className="bucket" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-default-large-3.png" alt="" />
