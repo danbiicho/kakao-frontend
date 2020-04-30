@@ -8,46 +8,65 @@ import '../../styles/Reset.scss';
 import './Home.scss';
 
 
-let lastScrollY = 0;
-let ticking = false;
+// let lastScrollY = 0;
+// let ticking = false;
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       topButton: false,
     };
+    // this.nav = React.createRef();
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
+    // try {
+    //   console.log('nav', this.nav)
+    //   console.log('style', this.nav.current.style)
+    // } catch (err) {
+    //   console.error(err)
+    // }
     window.addEventListener('scroll', this.handleScroll, true);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  nav = React.createRef();
 
   handleScroll = () => {
-    let screenScroll = window.innerHeight;
-    lastScrollY = window.scrollY;
-    console.log("screenScroll", screenScroll);
-
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        this.nav.current.style.top = `${lastScrollY}px`;
-        ticking = false;
-        console.log(this.nav.current.style.top);
-
-        this.setState({
-          topButton: (lastScrollY > 600),
-        })
-      });
-
-      ticking = true;
-    }
+    let lastScrollY = window.scrollY;
+    this.setState({
+      topButton: (lastScrollY > 600),
+    });
   };
+  // let screenScroll = window.innerHeight;
+
+  // console.log('aaaaa', this?.nav?.current?.style?.top)
+  // try {
+  // this.nav.current.style.top = `${lastScrollY}px`;
+  //   console.log('nav', this.nav)
+  //   console.log(this.nav.current.style)
+  // } catch (err) {
+  //   console.error(err)
+  //   console.log(this.nav)
+  // }
+
+
+  // console.log("screenScroll", screenScroll);
+
+  // if (!ticking) {
+  // window.requestAnimationFrame(() => {
+  // this.nav.current &&
+  // console.log({ nav: this.nav });
+  // ticking = false;
+  // console.log(this.nav.current.style.top);
+
+  // });
+
+  // ticking = true;
+  // }
 
   render() {
     return (
