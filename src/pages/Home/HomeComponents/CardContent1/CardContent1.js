@@ -26,14 +26,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>
@@ -43,14 +43,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>
@@ -60,14 +60,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>
@@ -77,14 +77,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>
@@ -94,14 +94,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>
@@ -111,14 +111,14 @@ class CardContent1 extends Component {
                                     <span className="thumImgWrap">
                                         <img className="thumImg" src="https://t1.daumcdn.net/friends/prod/product/8809681706995_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="img" />
                                     </span>
-                                    <p className="itemWrap">
-                                        <p className="itemTitle">페이스 말랑쿠션 라이언
+                                    <div className="itemWrap">
+                                        <div className="itemTitle">페이스 말랑쿠션 라이언
                                         <div className="cartButton">
                                                 <button className="cartImg"></button>
                                             </div>
-                                        </p>
+                                        </div>
 
-                                    </p>
+                                    </div>
                                     <p className="itemPrice">
                                         <span className="itemPriceNum">36,000</span>
                                         <span className="itemPriceWon">원</span>

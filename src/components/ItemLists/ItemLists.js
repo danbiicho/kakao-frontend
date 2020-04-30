@@ -3,12 +3,12 @@ import "./ItemLists.scss";
 
 class ItemLists extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      datas: [],
-    };
+      items:[],
+      selectItem:[],
+    }
   }
-
   componentDidMount = () => {
     fetch("http://localhost:3000/data/itemLists.json")
       .then((res) => res.json())
@@ -20,24 +20,49 @@ class ItemLists extends Component {
       });
   };
   
-  render() {
-    const { datas } = this.state;
+  handleClick = (e) => {
+    this.state.selectItem.push(e)
+  }
 
-    const itemLists = datas.map((data) => {
+  handleCart = (i) => {
+    this.state.idx.push(i)
+    this.setState({
+      clicked: true
+    })
+  }
+
+  render() {
+    const {
+      items = []
+    } = this.props;
+    const itemLists = items.map((item, index) => {
       return (
-        <li className="itemListWrap">
+        <li key={index} className="itemListWrap">
           <div className="itemListWrap">
-            <img className="item" onClick={this.itemId(data.id)} src={data.src} alt="" />
+            <img className="item" onClick={this.itemId(item.id)} src={item.image} alt="" />
             <div className="itemSubject">
-              <p className="topItemSubject">{data.name}</p>
+              <p className="topItemSubject">{item.name}</p>
               <img
                 className="buyImg"
+                onClick={this.handleClick(item)}
                 src="https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png"
                 alt=""
               />
             </div>
             <div className="itemCost">
-              <span className="itemCostNum">{data.cost}</span>
+              {function() {if(item.discount_percentage === true) 
+                return (
+                  <div>
+                    <span>{item.discount_percentage}</span>
+                    <span className="itemCostNum">{item.price}</span>
+                    <span className="won"> 원</span>
+                    <div>
+                      {item.price}
+                    </div>
+                  </div>
+                )}
+              }
+              <span className="itemCostNum">{item.price}</span>
               <span className="won"> 원</span>
             </div>
             <div className="opacityWrap"></div>

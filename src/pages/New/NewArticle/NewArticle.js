@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ItemLists from "../../../components/ItemLists/ItemLists";
+import { API } from "../../../config";
 import "./NewArticle.scss";
 
 class NewArticle extends Component {
@@ -10,11 +11,23 @@ class NewArticle extends Component {
     }
   }
 
+  componentDidMount = () => {
+   fetch(`${API}/product/newProduct`)
+     .then((res) => res.json())
+     .then((res) => {
+       this.setState(
+         {
+          items: res.product_new_main,
+         });
+     });
+  };
+
   getItemID = (id) => {
     this.setState({
       itemId: id
     })
   }
+
 
   render() {
     return (

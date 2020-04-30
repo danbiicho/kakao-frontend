@@ -8,38 +8,55 @@
     height: auto;
     border-radius: 5px;
   }
+  .slick-prev {
+    z-index: 100;
+    opacity: 0.7;
+    position: absolute;
+    left: 25px;
+    width: 25px;
+    height: 35px;
+    text-indent: -9999em;
+    font-size: 1px;
+    background: url(https://t1.kakaocdn.net/friends/new_store/2.0/pc/arrow-left.png)
+      center center / 16px no-repeat;
+  }
 
-  .moveImgButton {
-    .goBack {
-      position: absolute;
-      top: 80px;
-      left: 25px;
-      width: 25px;
-      height: 35px;
-      opacity: 0.7;
-      background: url(https://t1.kakaocdn.net/friends/new_store/2.0/pc/arrow-left.png)
-        center center / 16px no-repeat;
-      border: none;
-    }
+  .slick-prev:hover,
+  .slick-next:hover {
+    opacity: 1;
+    color: white;
+  }
 
-    .goFront {
-      position: absolute;
-      top: 80px;
-      right: 25px;
-      width: 16px;
-      height: 35px;
-      opacity: 0.7;
-      background: url(https://t1.kakaocdn.net/friends/new_store/2.0/pc/arrow-right.png)
-        center center / 16px no-repeat;
-      border: none;
-    }
+  .slick-next {
+    opacity: 0.7;
+    position: absolute;
+    right: 25px;
+    width: 25px;
+    height: 35px;
+    text-indent: -9999em;
+    font-size: 1px;
+    background: url(https://t1.kakaocdn.net/friends/new_store/2.0/pc/arrow-right.png)
+      center center / 16px no-repeat;
+  }
+
+  .goFront {
+    position: absolute;
+    opacity: 0.7;
+    right: 50px;
+    width: 25px;
+    height: 35px;
+    text-indent: -9999em;
+    font-size: 1px;
+    background: url(https://t1.kakaocdn.net/friends/new_store/2.0/pc/arrow-right.png)
+      center center / 16px no-repeat;
+    border: none;
   }
 
   .bannerInfo {
     display: flex;
     position: absolute;
     flex-direction: column;
-    left: 20px;
+    margin-left: 20px;
     bottom: 20px;
     color: white;
 
