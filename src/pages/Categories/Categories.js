@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import InnerCategory from "../../components/InnerCategory/InnerCategory";
-import SelectBox1 from "../../components/SelectBox/SelectBox1";
 import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       datas: [],
     };
@@ -38,7 +37,6 @@ class Categories extends Component {
                   })}
               </div>
               <InnerCategory/>
-              <SelectBox1/>
             </ul>
           </div>
         </div>

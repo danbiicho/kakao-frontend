@@ -8,9 +8,9 @@ class CardContent4 extends Component {
             <div className="CardContent4">
                 <article className="content">
                     <div className="cardContents">
-                        <sapn className="imgWrap">
+                        <span className="imgWrap">
                             <img className="imgWrapImg" src="https://t1.kakaocdn.net/friends/prod/main_tab/home/home_20200408103848_kr.jpg?type=thumb&opt=R335x335@2xa" alt="img" />
-                        </sapn>
+                        </span>
                     </div>
                 </article>
             </div>

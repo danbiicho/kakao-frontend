@@ -23,10 +23,19 @@
         color: #777777;
         margin: 10px 0px 5px 0;
       }
-      .buyImg {
+      .buyImgDisable {
         width: 32px;
         height: 32px;
-        left: 229px;
+        cursor: pointer;
+        background: url("https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png")
+          center center / 100% no-repeat;
+      }
+      .buyImgAble {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background: url("https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink.png")
+          center center / 100% no-repeat;
       }
     }
 

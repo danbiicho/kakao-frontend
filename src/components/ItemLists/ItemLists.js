@@ -14,14 +14,20 @@ class ItemLists extends Component {
     this.state.selectItem.push(e)
   }
 
+  handleCart = (i) => {
+    this.state.idx.push(i)
+    this.setState({
+      clicked: true
+    })
+  }
+
   render() {
     const {
       items = []
     } = this.props;
-
-    const itemLists = items.map((item) => {
+    const itemLists = items.map((item, index) => {
       return (
-        <li className="itemListWrap">
+        <li key={index} className="itemListWrap">
           <div className="itemListWrap">
             <img className="item" src={item.image_url} alt="" />
             <div className="itemSubject">
