@@ -3,30 +3,37 @@ import { withRouter } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Menu from '../../components/Menu/Menu';
 import MainContents from '../../pages/Home/HomeComponents/MainContents/MainContents';
+import New from "../New/New";
+import Hot from "../Hot/Hot";
+import Sale from "../Sale/Sale";
+import All from "../All/All";
 import Footer from '../../components/Footer/Footer';
 import '../../styles/Reset.scss';
 import './Home.scss';
 
-
-// let lastScrollY = 0;
-// let ticking = false;
+const obj = {
+  0: <MainContents />,
+  1: <New />,
+  2: <Hot />,
+  3: <Sale />,
+  4: <All />,
+}
 
 class Home extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
+      acitveTabId: 0,
       topButton: false,
-    };
-    // this.nav = React.createRef();
+    }
+  }
+
+  getMenu = (acitveTabId) => {
+    this.setState({ acitveTabId })
   }
 
   componentDidMount = () => {
-    // try {
-    //   console.log('nav', this.nav)
-    //   console.log('style', this.nav.current.style)
-    // } catch (err) {
-    //   console.error(err)
-    // }
     window.addEventListener('scroll', this.handleScroll, true);
   }
 
@@ -41,41 +48,16 @@ class Home extends Component {
       topButton: (lastScrollY > 600),
     });
   };
-  // let screenScroll = window.innerHeight;
-
-  // console.log('aaaaa', this?.nav?.current?.style?.top)
-  // try {
-  // this.nav.current.style.top = `${lastScrollY}px`;
-  //   console.log('nav', this.nav)
-  //   console.log(this.nav.current.style)
-  // } catch (err) {
-  //   console.error(err)
-  //   console.log(this.nav)
-  // }
-
-
-  // console.log("screenScroll", screenScroll);
-
-  // if (!ticking) {
-  // window.requestAnimationFrame(() => {
-  // this.nav.current &&
-  // console.log({ nav: this.nav });
-  // ticking = false;
-  // console.log(this.nav.current.style.top);
-
-  // });
-
-  // ticking = true;
-  // }
 
   render() {
+    console.log(this.state.acitveTabId)
     return (
       <div className="Home">
         <nav ref={this.nav} />
         <div className={(this.state.topButton) ? 'goTopButton' : 'button'}></div>
         <Navbar />
-        <Menu />
-        <MainContents />
+        <Menu onUpdateChild={this.getMenu} {...this.state.acitveTabId} />
+        {obj[this.state.acitveTabId]}
         <Footer />
       </div>
     );

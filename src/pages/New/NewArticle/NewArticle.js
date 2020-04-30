@@ -1,25 +1,35 @@
 import React, { Component } from "react";
 import ItemLists from "../../../components/ItemLists/ItemLists";
+import { API } from "../../../config";
 import "./NewArticle.scss";
 
 class NewArticle extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
-      datas: [],
-    };
+      items:[],
+      selectItem:[],
+    }
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/itemLists.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState(
-          {
-            datas: res.item1,
-          });
-      });
+   fetch(`${API}/product/newProduct`)
+     .then((res) => res.json())
+     .then((res) => {
+       this.setState(
+         {
+          items: res.product_new_main,
+         });
+     });
   };
+
+  //getItemID = (id) => {
+  //  this.setState({
+  //    selectItem: id
+  //  })
+  //}
+
+
   render() {
     return (
       <div className="NewArticle">
@@ -29,7 +39,7 @@ class NewArticle extends Component {
             <p className="bottomNewSubject">베이비 드리밍</p>
           </div>
           <ul className="articleLists">
-            <ItemLists />
+            <ItemLists items={this.state.items.slice(0, 8)}/>
           </ul>
           <div className="addItemsWith">
             <div className="addItems">
@@ -44,7 +54,7 @@ class NewArticle extends Component {
             <p className="topNewSubject">오늘 업데이트 했어요</p>
             <p className="bottomNewSubject">새로운 친구들</p>
           </div>
-          <ul className="articleLists"><ItemLists/></ul>
+          <ul className="articleLists"><ItemLists items={this.state.items.slice(9, 17)}/></ul>
         </div>
       </div>
     );

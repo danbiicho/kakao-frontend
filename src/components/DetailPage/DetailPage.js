@@ -11,10 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.scss";
 
 class DetailPage extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       datas: [],
+      itemInfo: {}
     }
   }
 
@@ -28,6 +29,12 @@ class DetailPage extends Component {
     })
   }
 
+  componentDidMount = () => {
+    fetch("http://10.58.5.133:8000/product/11")
+    .then(res => res.json())
+    .then(res => this.setState({itemInfo: res.information[0]}, ()=> console.log('asdfasf', this.state.itemInfo)))
+  }
+
   render() {
     const settings = {
       dots: true,
@@ -39,7 +46,7 @@ class DetailPage extends Component {
       autoplay: true,
     };
 
-    const { datas } = this.state;
+    const { datas, itemInfo } = this.state;
 
     const itemImg = datas.map((data) => {
       return <img key="" src={data.src} alt=""/>
@@ -54,7 +61,7 @@ class DetailPage extends Component {
         </div>
         <div className="pageTop">
           <div className="subject">
-            <p>죠르디에어팟케이스(pro)</p>
+            <p>{itemInfo.name}</p>
             <div className="shareHeaders">
               <img className="share" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/btn_katalk.png" alt="" />
               <img className="share" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/btn_kastory.png" alt="" />
@@ -63,7 +70,7 @@ class DetailPage extends Component {
             </div>
           </div>
           <div className="costInfo">
-            <span>17,000</span><span>원</span>
+            <span>{itemInfo.price}</span><span>원</span>
           </div>
           <div className="starImg">
             <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
@@ -74,7 +81,7 @@ class DetailPage extends Component {
             <span>(0)</span>
           </div>
         </div>
-        <DetailArticle />
+        <DetailArticle itemInfo={this.state.itemInfo}/>
         <RecomItem />
         <RecentlyItem />
         <Footer />

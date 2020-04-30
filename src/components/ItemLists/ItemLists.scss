@@ -45,8 +45,18 @@
         font-weight: bold;
       }
 
-      .won {
+      .itemSaleCostNum {
+        font-size: 16px;
         font-weight: bold;
+        color: #ff447f;
+      }
+
+      .originCost {
+        letter-spacing: -0.25px;
+        color: rgb(154, 154, 158);
+        margin-left: 6px;
+        text-decoration: line-through;
+        margin: 0;
       }
     }
 
