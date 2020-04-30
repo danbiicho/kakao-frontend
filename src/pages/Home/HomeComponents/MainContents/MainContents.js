@@ -17,7 +17,7 @@ class MainContents extends Component {
                     <CardContent4 />
                     <CardContent4 />
                 </div>
-                <div cclassName="contents">
+                <div className="contents">
                     <CardContent3 />
                     <CardContent3 />
                     <CardContent1 />

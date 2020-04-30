@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import './HotList.scss';
 import { API } from '../../config';
 
@@ -65,4 +64,4 @@ class HotList extends Component {
     }
 }
 
-export default withRouter(HotList);
+export default HotList;
