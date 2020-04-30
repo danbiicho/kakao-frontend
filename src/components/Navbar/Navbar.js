@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
 import Categories from "../../pages/Categories/Categories";
 import "./Navbar.scss";
 
@@ -70,6 +69,7 @@ class Navbar extends Component {
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-basket.png"
               alt=""
             />
+            <div className="addBucket"></div>
             <img
               className="langenIcons"
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-lang-en.png"
@@ -83,4 +83,4 @@ class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar);
+export default Navbar;

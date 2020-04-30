@@ -9,8 +9,6 @@ class Hot extends Component {
   render() {
     return (
       <div className="Hot">
-        <Navbar />
-        <Menu />
         <div className="hotContainer">
           <HotList />
         </div>

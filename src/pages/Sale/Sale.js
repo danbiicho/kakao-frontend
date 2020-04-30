@@ -9,8 +9,6 @@ class Sale extends Component {
   render() {
     return(
       <div className="Sale">
-        <NavBar />
-        <Menu />
         <SaleArticle />
         <Footer />
       </div>

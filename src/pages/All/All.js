@@ -11,8 +11,6 @@ class All extends Component {
   render() {
     return (
       <div className="All">
-        <Navbar />
-        <Menu />
         <div className="allContainer">
           <CategoryHeader />
           <div className="allListContainer">

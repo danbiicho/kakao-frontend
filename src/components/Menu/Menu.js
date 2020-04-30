@@ -3,10 +3,11 @@ import { withRouter } from 'react-router-dom';
 import '../Menu/Menu.scss';
 
 const obj = {
-  "/New": 1,
-  "/Hot": 2,
-  "/Sale": 3,
-  "/All": 4
+  "/index": 0,
+  "/index1": 1,
+  "/index2": 2,
+  "/index3": 3,
+  "/index4": 4
 };
 
 class Menu extends Component {
@@ -22,9 +23,11 @@ class Menu extends Component {
     this.setState({ activeTabId: obj[currentPath] });
   }
 
-  handleClick = (path) => {
-    this.props.history.push(path);
+  handleClick = (path, id) => {
+    this.props.onUpdateChild(id)
   }
+
+
 
   render() {
     return (
@@ -32,23 +35,23 @@ class Menu extends Component {
         <ul className="list">
           <li>
             <div>
-              <button className={(this.state.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/')} >홈</button>
+              <button className={(this.props.activeTabId === 0) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/index', 0)} >홈</button>
             </div>
           </li>
           <li>
             <div>
-              <button className={(this.state.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/New')}>신규</button>
+              <button className={(this.props.activeTabId === 1) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/index1', 1)}>신규</button>
             </div>
           </li>
           <li>
             <div>
-              <button className={(this.state.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/Hot')} >인기</button>
+              <button className={(this.props.activeTabId === 2) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/index2', 2)} >인기</button>
             </div>
           </li>
           <li>
-            <button className={(this.state.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/Sale')} >세일</button> </li>
+            <button className={(this.props.activeTabId === 3) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/index3', 3)} >세일</button> </li>
           <li>
-            <button className={(this.state.activeTabId === 4) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/All')} >전체</button >
+            <button className={(this.props.activeTabId === 4) ? 'isStyleVisible' : 'listbutton'} onClick={() => this.handleClick('/index4', 4)} >전체</button >
           </li>
         </ul>
       </div>

@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import InnerCategory from "../../components/InnerCategory/InnerCategory";
 import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       datas: [],
     };
   }
 
   componentDidMount = () => {
-    fetch(`${API}/categories`)
+    fetch("http://localhost:3000/data/category.json")
     .then((res) => res.json())
     .then((res) => {
       this.setState({
@@ -35,6 +36,7 @@ class Categories extends Component {
                   return <li>{data.name}</li>
                   })}
               </div>
+              <InnerCategory/>
             </ul>
           </div>
         </div>
