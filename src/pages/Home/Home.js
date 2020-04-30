@@ -19,11 +19,15 @@ const obj = {
   4: <All/>,
 }
 
+let lastScrollY = 0;
+let ticking = false;
+
 class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
       acitveTabId: 0,
+      topButton: false,
     }
   }
 
@@ -31,10 +35,41 @@ class Home extends Component {
     this.setState({acitveTabId})
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  nav = React.createRef();
+
+  handleScroll = () => {
+    let screenScroll = window.innerHeight;
+    lastScrollY = window.scrollY;
+    console.log("screenScroll", screenScroll);
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        this.nav.current.style.top = `${lastScrollY}px`;
+        ticking = false;
+        console.log(this.nav.current.style.top);
+
+        this.setState({
+          topButton: (lastScrollY > 600),
+        })
+      });
+
+      ticking = true;
+    }
+  };
   render() {
     console.log(this.state.acitveTabId)
     return (
-      <div>
+      <div className="Home">
+        <nav ref={this.nav} />
+        <div className={(this.state.topButton) ? 'goTopButton' : 'button'}></div>
         <Navbar />
         <Menu onUpdateChild={this.getMenu} {...this.state.acitveTabId}/>
         {obj[this.state.acitveTabId]}
