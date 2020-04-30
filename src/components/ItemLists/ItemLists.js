@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./ItemLists.scss";
 
 class ItemLists extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       datas: [],
     };
@@ -16,12 +16,10 @@ class ItemLists extends Component {
         this.setState(
           {
             datas: res.item1,
-          },
-          () => console.log(this.state.datas)
-        );
+          });
       });
   };
-
+  
   render() {
     const { datas } = this.state;
 
@@ -29,7 +27,7 @@ class ItemLists extends Component {
       return (
         <li className="itemListWrap">
           <div className="itemListWrap">
-            <img className="item" src={data.src} alt="" />
+            <img className="item" onClick={this.itemId(data.id)} src={data.src} alt="" />
             <div className="itemSubject">
               <p className="topItemSubject">{data.name}</p>
               <img

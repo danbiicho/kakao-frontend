@@ -3,6 +3,19 @@ import ItemLists from "../../../components/ItemLists/ItemLists";
 import "./NewArticle.scss";
 
 class NewArticle extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      itemId: [],
+    }
+  }
+
+  getItemID = (id) => {
+    this.setState({
+      itemId: id
+    })
+  }
+
   render() {
     return (
       <div className="NewArticle">
@@ -12,7 +25,7 @@ class NewArticle extends Component {
             <p className="bottomNewSubject">베이비 드리밍</p>
           </div>
           <ul className="articleLists">
-            <ItemLists />
+            <ItemLists itemId={this.getItemID()}/>
           </ul>
           <div className="addItemsWith">
             <div className="addItems">
