@@ -1,0 +1,30 @@
+{
+  "cartList": [
+    {
+      "productNum": 1,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428172714954_라이언쿠션.jpg?type=thumb&opt=R352x352@2xa",
+      "isContained": false
+    },
+    {
+      "productNum": 2,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428172802465_8809681709408_ZW_00.jpg?type=thumb&opt=R352x352@2xa",
+      "isContained": false
+    },
+    {
+      "productNum": 3,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428142706301_8809681709576_ZW_02.jpg?type=thumb&opt=R352x352@2xa"
+    },
+    {
+      "productNum": 4,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428142730536_8809681709590_ZW_02.jpg?type=thumb&opt=R352x352@2xa"
+    },
+    {
+      "productNum": 5,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428162149166_8809681708234_ZW_00.jpg?type=thumb&opt=R352x352@2xa"
+    },
+    {
+      "productNum": 6,
+      "src": "https://t1.daumcdn.net/friends/prod/product/20200428142750760_8809681709583_ZW_02.jpg?type=thumb&opt=R352x352@2xa"
+    }
+  ]
+}

@@ -8,10 +8,52 @@ import '../../styles/Reset.scss';
 import './Home.scss';
 
 
+let lastScrollY = 0;
+let ticking = false;
+
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      topButton: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  nav = React.createRef();
+
+  handleScroll = () => {
+    let screenScroll = window.innerHeight;
+    lastScrollY = window.scrollY;
+    console.log("screenScroll", screenScroll);
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        this.nav.current.style.top = `${lastScrollY}px`;
+        ticking = false;
+        console.log(this.nav.current.style.top);
+
+        this.setState({
+          topButton: (lastScrollY > 600),
+        })
+      });
+
+      ticking = true;
+    }
+  };
+
   render() {
     return (
-      <div>
+      <div className="Home">
+        <nav ref={this.nav} />
+        <div className={(this.state.topButton) ? 'goTopButton' : 'button'}></div>
         <Navbar />
         <Menu />
         <MainContents />
