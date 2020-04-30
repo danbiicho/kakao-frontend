@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import ItemLists from "../../../components/ItemLists/ItemLists";
+import { API } from "../../../config";
 import "./NewArticle.scss";
 
 class NewArticle extends Component {
   constructor() {
     super();
     this.state = {
-      datas: [],
+      items: [],
     };
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/itemLists.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState(
-          {
-            datas: res.item1,
-          });
-      });
+   fetch(`${API}/product/newProduct`)
+     .then((res) => res.json())
+     .then((res) => {
+       this.setState(
+         {
+          items: res.product_new_main,
+         });
+     });
   };
+  
   render() {
     return (
       <div className="NewArticle">
@@ -29,7 +31,7 @@ class NewArticle extends Component {
             <p className="bottomNewSubject">베이비 드리밍</p>
           </div>
           <ul className="articleLists">
-            <ItemLists />
+            <ItemLists items={this.state.items}/>
           </ul>
           <div className="addItemsWith">
             <div className="addItems">

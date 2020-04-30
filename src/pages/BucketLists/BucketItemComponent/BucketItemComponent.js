@@ -2,8 +2,16 @@ import React, { Component } from "react";
 import "./BucketItemComponent.scss";
 
 class BucketItemComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectItem:[],
+    }
+  }
   render() {
-    return(
+    const { selectItem } = this.state;
+    const selectItemMap = selectItem.map( item => {
+      return(
       <div className="BucketItemComponent">
         <li className="bucketItemLists">
           <div className="bucketLeft">
@@ -21,6 +29,10 @@ class BucketItemComponent extends Component {
           </div>
         </li>
       </div>
+      )
+    })
+    return(
+    <>{selectItemMap}</>
     )
   }
 }

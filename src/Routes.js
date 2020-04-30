@@ -18,17 +18,17 @@ class Routes extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/index" component={Home} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/new" component={New} />
-          <Route exact path="/hot" component={Hot} />
-          <Route exact path="/sale" component={Sale} />
-          <Route exact path="/all" component={All} />
-          <Route exact path="/toyminidoll" component={ToyMiniDoll} />
-          <Route exact path="/signUp" component={SignUp} />
+          <Route exact path="/index1" component={New} />
+          <Route exact path="/index2" component={Hot} />
+          <Route exact path="/index3" component={Sale} />
+          <Route exact path="/index4" component={All} />
+          <Route exact path="/products/category/subject" component={ToyMiniDoll} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/join" component={Join} />
-          <Route exact path="/detailPage" component={DetailPage} />
-          <Route exact path="/bucketLists" component={BucketLists}/>
+          <Route exact path="/products" component={DetailPage} />
+          <Route exact path="/buscket/products" component={BucketLists}/>
         </Switch>
       </Router>
     );

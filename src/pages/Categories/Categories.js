@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import InnerCategory from "../../components/InnerCategory/InnerCategory";
+import SelectBox1 from "../../components/SelectBox/SelectBox1";
 import { API } from "../../config";
 import "./Categories.scss";
 
@@ -12,7 +14,7 @@ class Categories extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`${API}/categories`)
+    fetch("http://localhost:3000/data/category.json")
     .then((res) => res.json())
     .then((res) => {
       this.setState({
@@ -35,6 +37,8 @@ class Categories extends Component {
                   return <li>{data.name}</li>
                   })}
               </div>
+              <InnerCategory/>
+              <SelectBox1/>
             </ul>
           </div>
         </div>
