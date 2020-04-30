@@ -17,12 +17,12 @@ class SelectBox2 extends Component {
         });
     }
 
-    select = (i) => {
+    select = i => {
         this.setState({
             select: i,
             open2: false,
         });
-        this.props.onChange(this.props.options[i])
+        //this.props.onChange(this.props.options[i])
     }
 
     render() {

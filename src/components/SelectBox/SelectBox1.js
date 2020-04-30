@@ -44,7 +44,7 @@ class SelectBox1 extends Component {
         return 0;
     }
 
-    openCheck
+    // openCheck
 
     render() {
         const { options } = this.props;
