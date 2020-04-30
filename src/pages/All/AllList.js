@@ -38,7 +38,7 @@ class AllList extends Component {
                                 <button className="allcartImg"></button>
                             </span>
                         </p>
-                        <span className="allItemCost">{data.price}원</span>
+                        <span className="allItemCost">{data.price.toLocaleString()}원</span>
 
                         <div className="opacityWrap"></div>
                         <div className="allItemLabel">
