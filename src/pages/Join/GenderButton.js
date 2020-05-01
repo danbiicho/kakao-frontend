@@ -1,6 +1,6 @@
 import React from "react";
 
-class Toggle extends React.Component {
+class GenderButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,6 +15,7 @@ class Toggle extends React.Component {
     this.setState({
       isToggleOn: !this.state.isToggleOn,
     });
+    this.props.getGender(this.state.isToggleOn);
   };
 
   render() {
@@ -29,4 +30,4 @@ class Toggle extends React.Component {
     );
   }
 }
-export default Toggle;
+export default GenderButton;

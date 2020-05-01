@@ -25,7 +25,7 @@
 }
 
 .box2_join {
-  border: 1px solid #7c7c7c;
+  border: 1px solid #ebebeb;
   width: 520px;
   height: 852px;
   display: flex;
@@ -41,7 +41,7 @@
   display: block;
   width: 440px;
   height: 653px;
-  border: 1px solid blue;
+  border: 1px solid hidden;
 }
 .tf_required {
   display: block;
@@ -69,9 +69,13 @@
 }
 
 .ebox_join {
+  position: absolute;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+  display: inline-block;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 382px;
   height: 47px;
   line-height: 47px;
   color: #ccc;
@@ -88,13 +92,34 @@
     Malgun Gothic, "돋움", dotum, sans-serif;
   letter-spacing: -0.03em;
   word-wrap: break-word;
+  input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  .ximg {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 10;
+    //   line-height: 0;
+    text-indent: -9999px;
+    vertical-align: top;
+    background-image: url(https://accounts.kakao.com/assets/weblogin/techin/retina/ico_account_200221.png);
+    background-position: -120px -30px;
+    background-size: 200px 220px;
+  }
+}
+.ebox_join:focus {
+  border-bottom: red($color: #000000);
 }
 
 .wrap_btn2 {
-  overflow: hidden;
   margin: 15px 0 40px;
   display: flex;
   flex-direction: row-reverse;
+  margin-top: 20px;
 }
 
 .info_error {
@@ -106,10 +131,63 @@
 .btn_g {
   display: inline-block;
   height: 42px;
+  display: inline-block;
   padding: 0 31px;
   color: #252525;
   border: 1px solid #adadad;
   border-radius: 30px;
   box-sizing: border-box;
   font-size: 15px;
+}
+
+.wow {
+  padding-top: 10px;
+  display: flex;
+}
+
+.birthToggle {
+  display: flex;
+  margin-left: auto;
+}
+
+.next-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn_g {
+  display: inline-block;
+  height: 42px;
+  padding: 0 31px;
+  color: #252525;
+  border: 1px solid #adadad;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+// -----밑에 X자 이미지 입니다.----------------
+// ------<span className="ximg"></span>-----
+.ximg {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 10;
+  //   line-height: 0;
+  text-indent: -9999px;
+  vertical-align: top;
+  background-image: url(https://accounts.kakao.com/assets/weblogin/techin/retina/ico_account_200221.png);
+  background-position: -120px -30px;
+  background-size: 200px 220px;
+  top: -33px;
+  left: 350px;
+}
+
+.man_wman {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-top: 10px;
 }
