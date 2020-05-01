@@ -6,7 +6,7 @@ class HotList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cart: false,
+            // cart: false,
             offset: 18, // 처음에 화면에 보이는 이미지 개수
             datas: [],
             perPage: 5,
@@ -18,7 +18,7 @@ class HotList extends Component {
     handleCart = (i) => {
         this.setState({
             idx: i,
-            cart: true,
+            cart: false,
         });
     }
 
@@ -46,7 +46,6 @@ class HotList extends Component {
 
     render() {
         const { datas } = this.state;
-        console.log("dfsfdf", this.state.datas);
 
         return (
             <div className="HotList">
@@ -55,17 +54,16 @@ class HotList extends Component {
                         <img className="hotImg" src={data.image_url} alt="img" />
                         <div className="cartWrap">
                             <button className="hotButton" key={i} className={(this.state.idx === i) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(i) }} />
-
                         </div>
                     </div>
                 ))}
-                <div className="contents">
+                {/* <div className="contents">
                     <div className="Pagination">
                         <span className="number"></span>
                         <button className="pageButton" onClick={this.addData}>더 보기</button>
                     </div>
 
-                </div>
+                </div> */}
             </div>
         );
     }

@@ -7,6 +7,7 @@ class AllList extends Component {
         super(props);
         this.state = {
             idx: 0,
+            cart: false,
         };
     }
 
@@ -40,9 +41,12 @@ class AllList extends Component {
                         </div>
                     </li>
                 </div>
-            ))
+            )
+            )
 
-        );
+
+
+        )
     }
 }
 

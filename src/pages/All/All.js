@@ -40,7 +40,7 @@ class All extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          datas: res.products,
+          datas: res.product,
         });
       });
   }
@@ -50,7 +50,7 @@ class All extends Component {
       fetch(`http://10.58.0.95:8000/product?sort_by=${obj[this.state.select]}`)
         .then((res) => res.json())
         .then((res) => {
-          this.setState({ datas: res.products })
+          this.setState({ datas: res.product })
         });
     }
   }
@@ -81,7 +81,7 @@ class All extends Component {
             </div>
           </div>
           <div className="allListContainer">
-            <AllList data={datas} />
+            {datas && (datas.length > 0) ? <AllList data={datas} /> : ""}
           </div>
         </div>
 

@@ -51,7 +51,6 @@
         height: 32px;
         position: absolute;
       }
-
       .allcartImg {
         width: 100%;
         height: 100%;
@@ -92,40 +91,40 @@
         }
       }
     }
+  }
 
-    .allItemCost {
-      font-size: 16px;
-      letter-spacing: -0.25px;
-      line-height: 20px;
-      font-family: $font-SFPro;
-      font-weight: 700;
-    }
+  .allItemCost {
+    font-size: 16px;
+    letter-spacing: -0.25px;
+    line-height: 20px;
+    font-family: $font-SFPro;
+    font-weight: 700;
+  }
 
-    .opacityWrap {
-      position: absolute;
-      width: 255px;
-      height: 255px;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.02);
-    }
+  .opacityWrap {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.02);
+  }
 
-    .allItemLabel {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+  .allItemLabel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
-      .itemLabel {
-        height: 22px;
-        width: 22px;
-        line-height: 22px;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 3px 8px;
-        border-radius: 2px;
-        background: rgb(30, 30, 30);
-        color: rgb(255, 255, 255);
-      }
+    .itemLabel {
+      height: 22px;
+      width: 22px;
+      line-height: 22px;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 2px;
+      background: rgb(30, 30, 30);
+      color: rgb(255, 255, 255);
     }
   }
 }

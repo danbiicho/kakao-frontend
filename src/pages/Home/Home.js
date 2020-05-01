@@ -30,44 +30,43 @@ class Home extends Component {
     };
 
   }
+
+  getMenu = (acitveTabId) => {
+    this.setState({ acitveTabId })
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+
+  handleScroll = () => {
+    let lastScrollY = window.scrollY;
+    this.setState({
+      topButton: (lastScrollY > 600),
+    });
+  };
+
+  scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
+  render() {
+    // console.log(this.state.acitveTabId)
+    return (
+      <div className="Home">
+        <nav ref={this.nav} />
+        <div className={(this.state.topButton) ? 'goTopButton' : 'button'} onClick={this.scrollToTop}></div>
+        <Navbar />
+        <Menu onUpdateChild={this.getMenu} {...this.state.acitveTabId} />
+        {obj[this.state.acitveTabId]}
+        <Footer />
+      </div>
+    );
+  }
 }
-
-getMenu = (acitveTabId) => {
-  this.setState({ acitveTabId })
-}
-
-componentDidMount = () => {
-  window.addEventListener('scroll', this.handleScroll, true);
-}
-
-componentWillUnmount = () => {
-  window.removeEventListener('scroll', this.handleScroll);
-}
-
-
-handleScroll = () => {
-  let lastScrollY = window.scrollY;
-  this.setState({
-    topButton: (lastScrollY > 600),
-  });
-};
-
-scrollToTop = () => {
-  window.scrollTo(0, 0)
-}
-
-render() {
-  console.log(this.state.acitveTabId)
-  return (
-    <div className="Home">
-      <nav ref={this.nav} />
-      <div className={(this.state.topButton) ? 'goTopButton' : 'button'} onClick={this.scrollToTop}></div>
-      <Navbar />
-      <Menu onUpdateChild={this.getMenu} {...this.state.acitveTabId} />
-      {obj[this.state.acitveTabId]}
-      <Footer />
-    </div>
-  );
-}
-
 export default withRouter(Home);
