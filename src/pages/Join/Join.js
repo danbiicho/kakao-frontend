@@ -42,13 +42,15 @@ class SignUp extends React.Component {
         gender: gender,
         birthday: `${birthYear}.${birthMonth}.${birthDay}`, //문제 없음
         lunar: false,
+        agreement: true,
         // {
-        // email: "bbc12ddb4@gmail.com",
+        // email: "bbc12fdfdfdddb4@gmail.com",
         // name: "hello",
         // password: "27271263",
         // gender: "woman",
         // birthday: "1993.11.12",
         // lunar: false,
+        // agreement: true,
         // }
       }),
     }).then((res) => {
@@ -96,7 +98,7 @@ class SignUp extends React.Component {
 
   handlebirthYear = (e) => {
     this.setState({
-      birthYear: e.target.vaㅑlue,
+      birthYear: e.target.value,
     });
   };
 
@@ -187,11 +189,13 @@ class SignUp extends React.Component {
                 </div>
                 <strong className="tf_required">비밀번호입력</strong>
                 <input
+                  type="password"
                   onChange={this.handlePW}
                   className="ebox_join"
                   placeholder="비밀번호  4~32자 "
                 ></input>
                 <input
+                  type="password"
                   onChange={this.handlePWCheck}
                   className="ebox_join"
                   placeholder="비밀번호확인"
@@ -206,14 +210,8 @@ class SignUp extends React.Component {
                 <strong className="tf_required">생일/성별</strong>
                 <div className="wow">
                   <div id="select_box">
-                    <label></label>
-                    <select
-                      id="color"
-                      title="select color"
-                      onChange={this.handlebirthYear}
-                      className="year"
-                    >
-                      <option selected="selected">연도</option>
+                    <select onChange={this.handlebirthYear} className="year">
+                      <option>연도</option>
                       <option>1980</option>
                       <option>1981</option>
                       <option>1982</option>
