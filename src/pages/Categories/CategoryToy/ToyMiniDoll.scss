@@ -1,4 +1,29 @@
 .ToyMiniDoll {
+  margin: 0 auto;
+  .CategoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 86px;
+    .listFilter {
+      z-index: 50;
+      display: inline-block;
+      display: flex;
+      width: 375px;
+      position: relative;
+      height: 45px;
+      border: 1px solid rgb(227, 229, 232);
+
+      .imgOptions {
+        width: 375px;
+        border-right: 1px solid rgb(227, 229, 232);
+        border-bottom: 1px solid rgb(227, 229, 232);
+        border-left: 1px solid rgb(227, 229, 232);
+      }
+    }
+  }
+
   .toyBanner {
     display: flex;
     position: relative;

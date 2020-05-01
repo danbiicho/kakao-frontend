@@ -23,13 +23,6 @@ class NewArticle extends Component {
      });
   };
 
-  //getItemID = (id) => {
-  //  this.setState({
-  //    selectItem: id
-  //  })
-  //}
-
-
   render() {
     return (
       <div className="NewArticle">
