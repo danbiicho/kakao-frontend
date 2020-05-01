@@ -7,16 +7,15 @@ class ItemLists extends Component {
     super(props)
     this.state={
       bucketLists: [],
-      bucketImg: "",
+      bucketImg: [],
     }
   }
 
   
   goBucket = (item) => {
     this.state.bucketLists.push(item)
-    this.setState({
-      bucketImg: item.id
-    })
+    this.state.bucketImg.push(item.id)
+    console.log(this.state.bucketImg)
   }
 
   goDetailPage = (id) => {
@@ -62,7 +61,7 @@ class ItemLists extends Component {
           <img
           className="buyImg"
           onClick={()=>this.goBucket(item)}
-          src={(this.state.bucketImg === item.id) ? "https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink.png":"https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png"}
+          src={(this.state.bucketImg.indexOf(item.id) !== -1) ? "https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink.png":"https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png"}
           alt=""
           />
         </li>

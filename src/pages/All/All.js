@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Navbar from '../../components/Navbar/Navbar';
-import Menu from '../../components/Menu/Menu';
-// import CategoryHeader from '../../components/CategoryHeader/CategoryHeader';
 import InfoBlock from '../../components/CategoryHeader/InfoBlock'
 import SelectBox1 from '../../components/SelectBox/SelectBox1';
 import SelectBox2 from '../../components/SelectBox/SelectBox2';
 import HeaderData from '../../components/CategoryHeader/CategoryHeaderData';
 import AllList from './AllList';
+import { API } from "../../config";
 import './All.scss';
-import { API } from '../../config';
 
 const obj = {
   0: "hot",
@@ -36,7 +33,7 @@ class All extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.0.95:8000/product?sort_by=hot")
+    fetch(`${API}product?sort_by=hot`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
