@@ -12,4 +12,19 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .CategoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .listFilter {
+      z-index: 100;
+      display: inline-block;
+      display: flex;
+      width: 376px;
+      position: relative;
+      height: 45px;
+      border: 1px solid rgb(227, 229, 232);
+    }
+  }
 }

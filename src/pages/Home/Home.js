@@ -26,7 +26,9 @@ class Home extends Component {
     this.state = {
       acitveTabId: 0,
       topButton: false,
-    }
+      toTop: 0,
+    };
+
   }
 
   getMenu = (acitveTabId) => {
@@ -49,12 +51,16 @@ class Home extends Component {
     });
   };
 
+  scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   render() {
-    console.log(this.state.acitveTabId)
+    // console.log(this.state.acitveTabId)
     return (
       <div className="Home">
         <nav ref={this.nav} />
-        <div className={(this.state.topButton) ? 'goTopButton' : 'button'}></div>
+        <div className={(this.state.topButton) ? 'goTopButton' : 'button'} onClick={this.scrollToTop}></div>
         <Navbar />
         <Menu onUpdateChild={this.getMenu} {...this.state.acitveTabId} />
         {obj[this.state.acitveTabId]}

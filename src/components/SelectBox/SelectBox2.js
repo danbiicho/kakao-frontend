@@ -17,16 +17,16 @@ class SelectBox2 extends Component {
         });
     }
 
-    select = (i) => {
+    select = i => {
         this.setState({
             select: i,
             open2: false,
         });
-        this.props.onChange(this.props.options[i])
+        //this.props.onChange(this.props.options[i])
     }
 
     render() {
-        const { options } = this.props;
+        const { options, clickHandler } = this.props;
         const { open2, select } = this.state;
         return (
             <div className="SelectBox2">
@@ -38,7 +38,7 @@ class SelectBox2 extends Component {
                     <ul className="options">
                         {options.map((el, i) => (
                             <li key={i}>
-                                <button className="listLink" onClick={() => { this.select(i) }}>
+                                <button className="listLink" onClick={() => { clickHandler(i) }}>
                                     {el.name}
                                 </button>
                             </li>

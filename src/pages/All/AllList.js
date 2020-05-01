@@ -1,51 +1,52 @@
 import React, { Component } from 'react';
 import './AllList.scss';
+import { API } from '../../config';
 
 class AllList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            datas: [],
+            idx: 0,
+            cart: false,
         };
     }
 
-    componentDidMount = () => {
-        fetch("http://localhost:3000/data/AllLists.json")
-            .then((res) => res.json())
-            .then((res) => {
-                this.setState({
-                    datas: res.allListItem,
-                });
-            });
+    handleCart = (i) => {
+        this.setState({
+            idx: i,
+            cart: true,
+        });
     }
 
-
     render() {
-        const { datas } = this.state;
+        const { data } = this.props;
         return (
-            datas.map((data, index) => (
+            data.map((product, index) => (
                 <div className="AllList">
                     <li className="allWrap">
-                        <img className="allImg" src={data.src} alt="img" />
-                        <p className="allItemTitle">{data.name}
+                        <img className="allImg" src={product.image_url} alt="img" />
+                        <p className="allItemTitle">{product.name}
 
                             <span className="allCartButton">
-                                <button className="allcartImg"></button>
+                                <button className="allcartImg" key={index} className={(this.state.idx === index) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(index) }} />
                             </span>
                         </p>
-                        <span className="allItemCost">{data.cost}</span>
+                        <span className="allItemCost">{product.price.toLocaleString()}원</span>
 
                         <div className="opacityWrap"></div>
                         <div className="allItemLabel">
                             <span className="itemLabel">
-                                {data.rank}
+                                {index + 1}
                             </span>
                         </div>
                     </li>
                 </div>
-            ))
+            )
+            )
 
-        );
+
+
+        )
     }
 }
 
