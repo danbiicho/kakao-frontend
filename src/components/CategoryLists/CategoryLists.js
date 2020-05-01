@@ -1,34 +1,42 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+//import API from "../../config";
 import "./CategoryLists.scss";
 
 class CategoryLists extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       datas: [],
     };
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/categoryLists.json")
+    fetch("http://localhost:3000/data/CategoryLists.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          datas: res.list1,
+          datas: res.list1
         });
       });
   };
-
   render() {
     const { datas } = this.state;
 
     const categoryLists = datas.map((data) => {
-      return <button>{data}</button>;
+      return (
+          <button>
+            {data}
+          </button>
+      );
     });
 
-    return <div className="CategoryLists">{categoryLists}</div>;
-  }
+    return (
+      <>
+      <div className="CategoryLists">
+        {categoryLists}
+      </div>
+      </>
+    )}
 }
 
-export default withRouter(CategoryLists);
+export default CategoryLists;

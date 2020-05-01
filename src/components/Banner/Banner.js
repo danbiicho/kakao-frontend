@@ -1,20 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import Slider from "react-slick";
+import { API } from "../../config";
 import "./Banner.scss";
 
 class Banner extends Component {
   constructor() {
     super();
     this.state = {
-      datas: [],
+      items: [],
     };
   }
 
   mkBanner = () => {
-    fetch("http://localhost:3000/data/Banner.json")
+    fetch(`${API}/product/new`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          datas: res.banner,
+          items: res.all_new_image,
         });
       });
   };
@@ -24,23 +26,40 @@ class Banner extends Component {
   };
 
   render() {
-    const { datas } = this.state;
-    const BannerMap = datas.map((data) => {
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      autoplay: true,
+      arrows: true,
+      prevArrow: (
+        <button type="button" className="slick-prev"></button>
+      ),
+      nextArrow: (
+        <button type="button" className="slick-next"></button>
+      )
+    };
+
+    const { items } = this.state;
+    const BannerMap = items.map((item) => {
       return (
-        <div className="Banner">
-          <img className="newBannerImg" src={data.img} alt="" />
-          <div className="moveImgButton">
-            <button className="goBack"></button>
-            <button className="goFront"></button>
-          </div>
+        <li key={item.id}>
+          <img className="newBannerImg" src={item.image_url} alt="" />
           <div className="bannerInfo">
-            <p className="TopInfo">{data.text1}</p>
-            <p className="bottomInfo">{data.text2}</p>
+            <p className="TopInfo">{item.name}</p>
+            <p className="bottomInfo">{item.description}</p>
           </div>
-        </div>
+        </li>
       );
     });
-    return <>{BannerMap}</>;
+    return (
+      <div className="Banner">
+        <Slider {...settings}>{BannerMap}</Slider>
+      </div>
+    )
   }
 }
 

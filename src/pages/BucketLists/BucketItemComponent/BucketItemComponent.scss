@@ -1,0 +1,75 @@
+.BucketItemComponent {
+  width: 1080px;
+  height: 130px;
+  .bucketItemLists {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 15px;
+
+    .bucketLeft {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .checkImg {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+
+      .bucketItem {
+        margin-right: 14px;
+        .itemImg {
+          width: 100px;
+          height: 100px;
+        }
+
+        .opacityWrap {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 0;
+          left: 35px;
+          background-color: rgba(0, 0, 0, 0.02);
+          border-radius: 4px;
+        }
+      }
+
+      .itemName {
+        font-size: 15px;
+        margin-left: 40px;
+      }
+    }
+
+    .bucketRight {
+      display: flex;
+      align-items: center;
+      .selectNum {
+        width: 78px;
+        height: 33px;
+        border-color: #e3e5e8;
+        background: url("https://t1.kakaocdn.net/friends/new_store/dropdown_down.png")
+          no-repeat 95% 50%;
+        background-size: 18px;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        background-color: white;
+        margin-right: 108px;
+      }
+      .itemCost {
+        font-size: 15px;
+        margin-right: 71px;
+      }
+
+      .deleteItem {
+        border: none;
+        background-color: white;
+        .deleteButton {
+          width: 13px;
+          height: 13px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

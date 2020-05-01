@@ -1,38 +1,18 @@
 import React, { Component } from "react";
-import Pagination from "../../components/Pagination/Pagination";
 import "./ItemLists.scss";
 
 class ItemLists extends Component {
-  constructor() {
-    super();
-    this.state = {
-      datas: [],
-    };
-  }
-
-  componentDidMount = () => {
-    fetch("http://localhost:3000/data/itemLists.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState(
-          {
-            datas: res.item1,
-          },
-          () => console.log(this.state.datas)
-        );
-      });
-  };
-
   render() {
-    const { datas } = this.state;
-
-    const itemLists = datas.map((data) => {
+    const {
+      items = []
+    } = this.props;
+    const itemLists = items.map((item, index) => {
       return (
-        <li className="itemListWrap">
+        <li key={index} className="itemListWrap">
           <div className="itemListWrap">
-            <img className="item" src={data.src} alt="" />
+            <img className="item" src={item.image_url} alt="" />
             <div className="itemSubject">
-              <p className="topItemSubject">{data.name}</p>
+              <p className="topItemSubject">{item.name}</p>
               <img
                 className="buyImg"
                 src="https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink-3.png"
@@ -40,8 +20,24 @@ class ItemLists extends Component {
               />
             </div>
             <div className="itemCost">
-              <span className="itemCostNum">{data.cost}</span>
-              <span className="won"> 원</span>
+              {function(){if(item.discount_percentage > 0) {
+                return (
+                <div>
+                  <span className="itemSaleCostNum">{Math.floor(item.discount_percentage)}% {(Math.floor((item.price - (item.discount_percentage * item.price * 0.01))/100)*100).toLocaleString()}원</span>
+                  <div className="originCost">
+                    {item.price}원
+                  </div>
+                </div>
+                )
+              } else {
+                return (
+                  <>
+                    <span className="itemCostNum">{item.price.toLocaleString()}</span>
+                    <span className="won"> 원</span>
+                  </>
+                )}
+                }()
+              }
             </div>
             <div className="opacityWrap"></div>
           </div>
@@ -52,7 +48,6 @@ class ItemLists extends Component {
     return (
       <>
         <ul className="ItemLists">{itemLists}</ul>
-        <Pagination />
       </>
     );
   }

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import SaleArticle from "./SaleArticle/SaleArticle";
 import './Sale.scss';
 
 class Sale extends Component {
   render() {
     return(
-      <div>
+      <div className="Sale">
+        <SaleArticle />
       </div>
     )
   }
 }
 
-export default withRouter(Sale);
+export default Sale;

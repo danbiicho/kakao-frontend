@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import NavBar from "../Navbar/Navbar";
 import DetailArticle from "./DetailArticle/DetailArticle";
+import RecomItem from "../RecomItem/RecomItem";
+import RecentlyItem from "../RecentlyItem/RecentlyItem";
 import Footer from "../Footer/Footer";
 import PaymentBar from "./PaymentBar/PaymentBar";
 import "slick-carousel/slick/slick.css";
@@ -9,10 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.scss";
 
 class DetailPage extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       datas: [],
+      itemInfo: {}
     }
   }
 
@@ -22,8 +25,14 @@ class DetailPage extends Component {
     .then(res => {
       this.setState({
         datas: res.itemImg
-      }, () => {console.log('fetch', this.state.datas)})
+      })
     })
+  }
+
+  componentDidMount = () => {
+    fetch("http://10.58.5.133:8000/product/11")
+    .then(res => res.json())
+    .then(res => this.setState({itemInfo: res.information[0]}, ()=> console.log('asdfasf', this.state.itemInfo)))
   }
 
   render() {
@@ -37,10 +46,10 @@ class DetailPage extends Component {
       autoplay: true,
     };
 
-    const { datas } = this.state;
+    const { datas, itemInfo } = this.state;
 
     const itemImg = datas.map((data) => {
-      return <img src={data.src} alt=""/>
+      return <img key="" src={data.src} alt=""/>
     })
     return (
       <div className="DetailPage">
@@ -52,7 +61,7 @@ class DetailPage extends Component {
         </div>
         <div className="pageTop">
           <div className="subject">
-            <p>죠르디에어팟케이스(pro)</p>
+            <p>{itemInfo.name}</p>
             <div className="shareHeaders">
               <img className="share" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/btn_katalk.png" alt="" />
               <img className="share" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/btn_kastory.png" alt="" />
@@ -61,18 +70,20 @@ class DetailPage extends Component {
             </div>
           </div>
           <div className="costInfo">
-            <span>17,000</span><span>원</span>
+            <span>{itemInfo.price}</span><span>원</span>
           </div>
           <div className="starImg">
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_on.png" alt=""/>
-            <span>(4)</span>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <img className="star" src="https://t1.kakaocdn.net/friends/new_store/2.0/common/star_off.png" alt=""/>
+            <span>(0)</span>
           </div>
         </div>
-        <DetailArticle />
+        <DetailArticle itemInfo={this.state.itemInfo}/>
+        <RecomItem />
+        <RecentlyItem />
         <Footer />
         <PaymentBar />
       </div>

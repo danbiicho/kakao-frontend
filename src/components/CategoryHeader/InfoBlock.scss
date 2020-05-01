@@ -1,0 +1,44 @@
+.InfoBlock {
+  width: 705px;
+  height: 85px;
+  padding: 28px 20px 28px 0;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .textWrap {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(154, 154, 158);
+    font-size: 16px;
+    letter-spacing: -0.23px;
+    font-size: 16px;
+    letter-spacing: -0.23px;
+
+    .total {
+      font-size: 15px;
+      letter-spacing: -0.23px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+  }
+}
+.checkBox {
+  display: flex;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .checkBoxText {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

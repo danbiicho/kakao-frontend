@@ -1,53 +1,7 @@
-.Hot {
-  width: 100%;
+.hotContainer {
+  width: 1120px;
+  padding: 180px 8px;
   display: flex;
   margin: 0 auto;
-
-  .hotContainer {
-    padding: 160px 8px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hotWrap {
-    width: 352px;
-    height: 352px;
-    margin: 0px 6px 12px;
-    position: relative;
-
-    .hotImg {
-      width: 100%;
-      border-radius: 8px;
-    }
-  }
-
-  .cartWrap {
-    bottom: 5px;
-    right: 5px;
-    width: 42px;
-    height: 42px;
-    position: absolute;
-  }
-
-  .hotButton {
-    border: 0 none;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999em;
-    font-size: 1px;
-    background: url(https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-grey.png)
-      center center / 100% no-repeat;
-    border-radius: 3px;
-
-    &:focus {
-      outline: none;
-    }
-  }
-  .cartOn {
-    background: url(https://t1.kakaocdn.net/friends/new_store/2.0/common/basket-pink.png)
-      center center / 100% no-repeat;
-  }
+  flex-wrap: wrap;
 }

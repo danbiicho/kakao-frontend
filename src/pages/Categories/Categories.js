@@ -1,13 +1,43 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import InnerCategory from "../../components/InnerCategory/InnerCategory";
+import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: [],
+      categoryState: [],
+      innerCategories: []
+    };
   }
+
+  componentDidMount = () => {
+    fetch(`${API}/product/kind`)
+    .then((res) => res.json())
+    .then((res) => {
+      this.setState({
+        categories: res.category
+      })
+    })
+  }
+
+  changeCategory = () => {
+    this.setState({
+      categoryState: !this.state.categoryState
+    })
+  }
+
+  hoverHandler = (category) => {
+    const key = Object.keys(category)[0];
+    this.setState({innerCategories: category[key]})
+  }
+
   render() {
+    const { categories, innerCategories } = this.state;
+
     return (
       <div className="Categories">
         <div className="categoriesHover">
@@ -16,20 +46,16 @@ class Categories extends Component {
             onMouseLeave={this.props.onMouseLeave}
           >
             <ul className="categoryMenuUl">
-              <div class="categoryList1">
-                <li>전체</li>
-                <li>테마 기획전</li>
-                <li>토이</li>
-                <li>리빙</li>
-                <li>잡화 </li>
-                <li>문구</li>
-                <li>의류</li>
-                <li>파자마</li>
-                <li>여행/레져</li>
-                <li>생활테크</li>
-                <li>폰 액세서리</li>
-                <li>식품</li>
+              <div className="categoryList1">
+                {categories.map( (category, index) => {
+                  return (
+                    <li key={index} onMouseEnter={() => this.hoverHandler(category)}>
+                      {Object.keys(category)}
+                    </li>
+                    )
+                  })}
               </div>
+            <InnerCategory InnerCategories={innerCategories}/>
             </ul>
           </div>
         </div>
