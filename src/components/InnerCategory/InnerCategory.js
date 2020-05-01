@@ -7,8 +7,11 @@ class InnerCategory extends Component {
     const { InnerCategories } = this.props;
     return(
       <div className="InnerCategory">
-        {InnerCategories.map( category => (
-          <Link to="/products/category/subject"><li>{category.name}</li></Link>
+        {InnerCategories.map( (category, index) => (
+          <Link key={index} to="/products/category/subject" 
+          style={{ textDecoration: 'none'}}>
+            <li>{category.name}</li>
+          </Link>
         )
         )}
       </div>

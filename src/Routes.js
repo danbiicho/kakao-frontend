@@ -19,7 +19,7 @@ class Routes extends Component {
           <Route exact path="/products/category/subject" component={ToyMiniDoll} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/join" component={Join} />
-          <Route exact path="/products" component={DetailPage} />
+          <Route exact path="/products/:id" component={DetailPage} />
           <Route exact path="/buscket/products" component={BucketLists}/>
         </Switch>
       </Router>
