@@ -11,6 +11,7 @@ class HotList extends Component {
             datas: [],
             perPage: 5,
             currentPage: 1,
+            idx: 0,
         };
     }
 
@@ -18,15 +19,15 @@ class HotList extends Component {
         this.setState({
             idx: i,
             cart: true,
-        }, console.log(this.state.idx));
+        });
     }
 
     componentDidMount = () => {
-        fetch("http://10.58.5.133:8000/product/hot")
+        fetch("http://localhost:3000/data/HotLists.json")
             .then((res) => res.json())
             .then((res) => {
                 this.setState({
-                    datas: res.all_popular_image,
+                    datas: res.cartList,
                 });
             });
     }
@@ -37,6 +38,10 @@ class HotList extends Component {
         });
     }
 
+    addData = () => {
+
+    }
+
     render() {
         const { datas } = this.state;
         // const { datas, currentPage, }
@@ -45,10 +50,10 @@ class HotList extends Component {
             <>
                 {datas.map((data, i) => (
                     <div className="hotWrap">
-                        <img className="hotImg" src={data.all_popular_image} alt="img" />
+                        <img className="hotImg" src={data.src} alt="img" />
                         <div className="cartWrap">
-                            <button className="hotButton" key={i} className={(this.state.idx === i) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(i) }}>
-                            </button>
+                            <button className="hotButton" key={i} className={(this.state.idx === i) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(i) }} />
+
                         </div>
                     </div>
                 ))}

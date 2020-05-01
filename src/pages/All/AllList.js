@@ -3,42 +3,34 @@ import './AllList.scss';
 import { API } from '../../config';
 
 class AllList extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
-            datas: [],
-            select: "",
+            idx: 0,
         };
     }
 
-    componentDidMount = () => {
-        fetch("http://10.58.0.95:8000/product?sort_by=hot")
-            .then((res) => res.json())
-            .then((res) => {
-                this.setState({
-                    datas: res.hot_product,
-                });
-            });
+    handleCart = (i) => {
+        this.setState({
+            idx: i,
+            cart: true,
+        });
     }
 
-
     render() {
-        const { datas } = this.state;
-
-        // const fomatter = new 
+        const { data } = this.props;
         return (
-            datas.map((data, index) => (
+            data.map((product, index) => (
                 <div className="AllList">
                     <li className="allWrap">
-                        <img className="allImg" src={data.image_url} alt="img" />
-                        <p className="allItemTitle">{data.name}
+                        <img className="allImg" src={product.image_url} alt="img" />
+                        <p className="allItemTitle">{product.name}
 
                             <span className="allCartButton">
-                                <button className="allcartImg"></button>
+                                <button className="allcartImg" key={index} className={(this.state.idx === index) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(index) }} />
                             </span>
                         </p>
-                        <span className="allItemCost">{data.price.toLocaleString()}원</span>
+                        <span className="allItemCost">{product.price.toLocaleString()}원</span>
 
                         <div className="opacityWrap"></div>
                         <div className="allItemLabel">

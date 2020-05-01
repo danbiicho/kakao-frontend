@@ -16,6 +16,7 @@ class Home extends Component {
     super();
     this.state = {
       topButton: false,
+      toTop: 0,
     };
   }
 
@@ -49,11 +50,15 @@ class Home extends Component {
     }
   };
 
+  scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div className="Home">
         <nav ref={this.nav} />
-        <div className={(this.state.topButton) ? 'goTopButton' : 'button'}></div>
+        <div className={(this.state.topButton) ? 'goTopButton' : 'button'} onClick={this.scrollToTop}></div>
         <Navbar />
         <Menu />
         <MainContents />
