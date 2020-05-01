@@ -16,7 +16,7 @@ class SaleItemLists extends Component {
    .then((res) => res.json())
    .then((res) => {
      this.setState({ 
-       items: res.sale_item
+       items: res.sale_item.slice(0, 8)
      })
    })
   }
