@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Categories from "../../pages/Categories/Categories";
 import "./Navbar.scss";
 
@@ -59,17 +60,18 @@ class Navbar extends Component {
                 alt=""
               />
             </div>
+            <Link to="/join">
             <img
               className="mypageIcon"
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-mypage.png"
               alt=""
             />
+            </Link>
             <img
               className="baskestIcon"
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-basket.png"
               alt=""
             />
-            {/*<div className="addBucket"></div>*/}
             <img
               className="langenIcons"
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-lang-en.png"

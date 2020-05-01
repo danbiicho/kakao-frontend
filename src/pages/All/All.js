@@ -5,7 +5,6 @@ import SelectBox1 from '../../components/SelectBox/SelectBox1';
 import SelectBox2 from '../../components/SelectBox/SelectBox2';
 import HeaderData from '../../components/CategoryHeader/CategoryHeaderData';
 import AllList from './AllList';
-import { API } from "../../config";
 import './All.scss';
 
 const obj = {
@@ -33,7 +32,7 @@ class All extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API}product?sort_by=hot`)
+    fetch("http://10.58.0.95:8000/product?sort_by=hot")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
