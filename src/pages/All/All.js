@@ -61,8 +61,6 @@ class All extends Component {
 
     return (
       <div className="All">
-        <Navbar />
-        <Menu />
         <div className="allContainer">
           <div className="CategoryHeader">
             <InfoBlock />

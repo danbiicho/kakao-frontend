@@ -6,6 +6,12 @@ import Footer from "../../components/Footer/Footer";
 import "./BucketLists.scss";
 
 class BucketLists extends Component {
+  constructor() {
+    super()
+    this.state = {
+      selectItem:[],
+    }
+  }
   render() {
     return(
       <div className="BucketLists">
@@ -15,7 +21,7 @@ class BucketLists extends Component {
             <span className="subject">장바구니</span>
           </div>
           {/*<BucketArticle />*/}
-          <AddtoBucket />
+          <AddtoBucket selectItem = {this.state.selectItem}/>
         </div>
         <Footer/>
       </div>

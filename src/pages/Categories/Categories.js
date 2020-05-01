@@ -1,27 +1,43 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import InnerCategory from "../../components/InnerCategory/InnerCategory";
 import { API } from "../../config";
 import "./Categories.scss";
 
 class Categories extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      datas: [],
+      categories: [],
+      categoryState: [],
+      innerCategories: []
     };
   }
 
   componentDidMount = () => {
-    fetch(`${API}/categories`)
+    fetch(`${API}/product/kind`)
     .then((res) => res.json())
     .then((res) => {
       this.setState({
-        datas: res.Category
+        categories: res.category
       })
     })
   }
 
+  changeCategory = () => {
+    this.setState({
+      categoryState: !this.state.categoryState
+    })
+  }
+
+  hoverHandler = (category) => {
+    const key = Object.keys(category)[0];
+    this.setState({innerCategories: category[key]})
+  }
+
   render() {
+    const { categories, innerCategories } = this.state;
+
     return (
       <div className="Categories">
         <div className="categoriesHover">
@@ -31,10 +47,15 @@ class Categories extends Component {
           >
             <ul className="categoryMenuUl">
               <div className="categoryList1">
-                {this.state.datas.map( (data) => {
-                  return <li>{data.name}</li>
+                {categories.map( (category, index) => {
+                  return (
+                    <li key={index} onMouseEnter={() => this.hoverHandler(category)}>
+                      {Object.keys(category)}
+                    </li>
+                    )
                   })}
               </div>
+            <InnerCategory InnerCategories={innerCategories}/>
             </ul>
           </div>
         </div>
