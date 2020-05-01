@@ -36,7 +36,7 @@ class NewArticle extends Component {
         <div className="articleWidth">
           <div className="newSubject">
             <p className="topNewSubject">추천 신규 테마</p>
-            <p className="bottomNewSubject">베이비 드리밍</p>
+            <p className="bottomNewSubject">레몬테라스</p>
           </div>
           <ul className="articleLists">
             <ItemLists items={this.state.items.slice(0, 8)}/>

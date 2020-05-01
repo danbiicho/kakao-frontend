@@ -69,7 +69,7 @@ class Navbar extends Component {
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-basket.png"
               alt=""
             />
-            <div className="addBucket"></div>
+            {/*<div className="addBucket"></div>*/}
             <img
               className="langenIcons"
               src="https://t1.kakaocdn.net/friends/new_store/2.0/pc/ico-header-lang-en.png"
