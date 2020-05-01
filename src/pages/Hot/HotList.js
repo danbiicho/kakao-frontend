@@ -22,12 +22,13 @@ class HotList extends Component {
     }
 
     componentDidMount = () => {
-        fetch(`${API}/data/HotLists.json`)
+        fetch("http://10.58.5.133:8000/product/hot")
+            // `${API}/data/HotLists.json`
             .then((res) => res.json())
             .then((res) => {
                 this.setState({
-                    datas: res.cartList,
-                });
+                    datas: res.all_popular_image,
+                }, () => console.log(this.state.datas));
             });
     }
 
@@ -39,13 +40,14 @@ class HotList extends Component {
 
     render() {
         const { datas } = this.state;
+        console.log("dfsfdf", this.state.datas);
         // const { datas, currentPage, }
 
         return (
             <div className="HotList">
                 {datas.map((data, i) => (
                     <div className="hotWrap">
-                        <img className="hotImg" src={data.src} alt="img" />
+                        <img className="hotImg" src={data.image_url} alt="img" />
                         <div className="cartWrap">
                             <button className="hotButton" key={i} className={(this.state.idx === i) ? 'cartOn' : 'cartOff'} onClick={() => { this.handleCart(i) }}>
                             </button>

@@ -4,13 +4,14 @@ import CardContent1 from '../CardContent1/CardContent1';
 import CardContent2 from '../CardContent2/CardContent2';
 import CardContent3 from '../CardContent3/CardContent3';
 import CardContent4 from '../CardContent4/CardContent4';
+import HomeCard from '../HomeCard/HomeCard';
 import './MainContents.scss';
 
 class MainContents extends Component {
     render() {
         return (
             <div className="MainContents">
-                <div className="contents">
+                {/* <div className="contents">
                     <CardContent1 />
                     <CardContent3 />
                     <CardContent3 />
@@ -28,7 +29,8 @@ class MainContents extends Component {
                     <CardContent4 />
                     <CardContent3 />
                     <CardContent1 />
-                </div>
+                </div> */}
+                <HomeCard />
             </div>
         );
     }
