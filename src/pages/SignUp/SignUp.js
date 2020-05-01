@@ -10,7 +10,10 @@ class SignUp extends React.Component {
 
     this.state = {
       checkbox: "",
+      age14se: false,
+      conditioms: false,
       agree: false,
+      compulsory: false,
     };
   }
 
@@ -20,7 +23,7 @@ class SignUp extends React.Component {
     fetch("http://10.58.0.95:8000/account", {
       method: "POST",
       body: JSON.stringify({
-        agree: false,
+        agreement: true,
       }),
     }).then((res) => {
       console.log(res.status);
@@ -46,6 +49,19 @@ class SignUp extends React.Component {
 
     console.log(event.target.value);
   };
+
+  // handleAgreeAll = () =>{
+  //   if(this.state.agree === true)
+  //   return agee-box.
+  // }
+  // ---------------만들어본 조건문------------
+  // grandAgreae = () =>{
+  //   if(this.state.agree
+  //     ===true)
+
+  //     return
+  //     agee-box.target.background-color : #f6f6f6;}
+  // }
 
   render() {
     return (
