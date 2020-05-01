@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import API from "../../config";
 import "./CategoryLists.scss";
 
 class CategoryLists extends Component {
@@ -24,7 +23,7 @@ class CategoryLists extends Component {
 
     const categoryLists = datas.map((data) => {
       return (
-          <button>
+          <button className="categoryButton">
             {data}
           </button>
       );

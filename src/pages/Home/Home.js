@@ -52,9 +52,9 @@ class Home extends Component {
 
     if (!ticking) {
       window.requestAnimationFrame(() => {
-        this.nav.current.style.top = `${lastScrollY}px`;
+        //this.nav.current.style.top = `${lastScrollY}px`;
         ticking = false;
-        console.log(this.nav.current.style.top);
+        //console.log(this.nav.current.style.top);
 
         this.setState({
           topButton: (lastScrollY > 600),
