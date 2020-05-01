@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Slider from "react-slick";
 import NavBar from "../Navbar/Navbar";
 import DetailArticle from "./DetailArticle/DetailArticle";
@@ -6,6 +7,7 @@ import RecomItem from "../RecomItem/RecomItem";
 import RecentlyItem from "../RecentlyItem/RecentlyItem";
 import Footer from "../Footer/Footer";
 import PaymentBar from "./PaymentBar/PaymentBar";
+import { API } from "../../config";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.scss";
@@ -18,22 +20,14 @@ class DetailPage extends Component {
       itemInfo: {}
     }
   }
-
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/detailPage.json")
+    fetch(`${API}/product/${this.props.match.params.id}`)
     .then(res => res.json())
-    .then(res => {
-      this.setState({
-        datas: res.itemImg
-      })
+    .then(res => this.setState({
+      itemInfo: res.information[0],
+      datas: res.information.slice(1, res.information.length)
     })
-  }
-
-  componentDidMount = () => {
-    fetch("http://10.58.5.133:8000/product/11")
-    .then(res => res.json())
-    .then(res => this.setState({itemInfo: res.information[0]}, ()=> console.log('asdfasf', this.state.itemInfo)))
-  }
+  )}
 
   render() {
     const settings = {
@@ -49,8 +43,10 @@ class DetailPage extends Component {
     const { datas, itemInfo } = this.state;
 
     const itemImg = datas.map((data) => {
-      return <img key="" src={data.src} alt=""/>
+      return <img key="" src={data.image_url} alt=""/>
     })
+
+    console.log(this.props)
     return (
       <div className="DetailPage">
         <NavBar />
@@ -91,4 +87,4 @@ class DetailPage extends Component {
   }
 }
 
-export default DetailPage;
+export default withRouter(DetailPage);

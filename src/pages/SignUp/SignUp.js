@@ -2,6 +2,7 @@ import React from "react";
 import "./SignUp.scss";
 import CustomButton from "./CustomButtom";
 import Toggle from "./Toggle";
+import Agree from "./Agree";
 
 class SignUp extends React.Component {
   constructor() {
@@ -9,8 +10,36 @@ class SignUp extends React.Component {
 
     this.state = {
       checkbox: "",
+      agree: false,
     };
   }
+
+  onClickJoin = () => {
+    // 비구조화할당 ㅜ두리님이
+
+    fetch("http://10.58.0.95:8000/account", {
+      method: "POST",
+      body: JSON.stringify({
+        agree: false,
+      }),
+    }).then((res) => {
+      console.log(res.status);
+      if (res.status === 200) {
+        alert("동의하셨습니다!");
+      }
+    });
+  };
+
+  handleAgree = (value) => {
+    this.setState({
+      agree: value,
+    });
+  };
+  handleAgree = () => {
+    this.setState({
+      agree: !this.state.agree,
+    });
+  };
 
   handleChage = (event) => {
     this.setState({ checkbox: event.target.value });
@@ -36,7 +65,7 @@ class SignUp extends React.Component {
                 </h2>
                 <div className="tem_check">
                   <div className="under-bar">
-                    <Toggle />
+                    <agree />
                     <div className="middle-agree-0">모두 동의합니다.</div>
                   </div>
 
@@ -68,7 +97,10 @@ class SignUp extends React.Component {
                       </div>
 
                       <div className="under-bar">
-                        <Toggle />
+                        <Agree
+                          getAgree={this.handleAgree}
+                          clicked={this.state.agree}
+                        />
                         <div className="middle-agree">
                           [필수]개인정보 수집 및 이용 동의{" "}
                         </div>
@@ -84,7 +116,9 @@ class SignUp extends React.Component {
                   </div>
                 </div>
               </div>
-              <button className="agee-box">동의</button>
+              <button onClick={this.onClickJoin} className="agee-box">
+                동의
+              </button>
             </div>
           </div>
           {/* -------footer--------open---- */}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.scss";
+import Toggle from "../SignUp/Toggle";
 
 class Login extends React.Component {
   // --------여기 함수 만들기 ------------
@@ -13,6 +14,17 @@ class Login extends React.Component {
     };
   }
 
+  handleemail = (e) => {
+    console.log("e.target.value이 뭐냐면 ", e.target.value);
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  handePassword = (e) => {
+    console.log("e.target.value이 뭐냐면 ", e.target.value);
+    this.setState({ password: e.target.value });
+  };
   //  ES6 브라우져가 호풀한다. 괄호 인자르(event)
   handleChage = (event) => {
     this.setState({ email: event.target.value });
@@ -29,6 +41,29 @@ class Login extends React.Component {
     console.log("password ====>", this.state.password);
   };
 
+  // ----------페치함수-------------페피함수----------
+  handleLogin = () => {
+    // console.log("this.state", this.state);
+    fetch("http://10.58.0.95:8000/account/signin", {
+      method: "POST",
+      // headers: {
+      //   "token": localStorage.setItem("wtw-token")
+      // },
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log("성공");
+        if (response.access_token) {
+          localStorage.setItem("token", response.access_token);
+          alert("로그인에 성공하셨습니다.");
+          this.props.history.push("/main");
+        }
+      });
+  };
   // --------여기 함수 만들기 ------------
   render() {
     return (
@@ -69,7 +104,7 @@ class Login extends React.Component {
                     </h1>
                     <div>
                       <input
-                        onChange={this.handleChage}
+                        onChange={this.handleemail}
                         className="idbox"
                         type="text"
                         placeholder="카카오계정 (이메일 또는 전화번호)"
@@ -84,12 +119,12 @@ class Login extends React.Component {
                       ></input>
 
                       <div class="set_login">
-                        <button class="loginhold">V</button>
+                        <Toggle />
 
-                        <div>로그인 상태 유지</div>
+                        <div>&nbsp;&nbsp;로그인 상태 유지</div>
                       </div>
                       <button
-                        onClick={this.handleclick}
+                        onClick={this.handleLogin}
                         class="loginbutton"
                         type="button"
                       >

@@ -1,6 +1,6 @@
 import React from "react";
 
-class Toggle extends React.Component {
+class Lunar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,22 +11,16 @@ class Toggle extends React.Component {
     // this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = () => {
-    this.setState({
-      isToggleOn: !this.state.isToggleOn,
-    });
-  };
-
   render() {
     return (
-      <p onClick={this.handleClick}>
-        {this.state.isToggleOn ? (
-          <span class="ico_account"></span>
-        ) : (
+      <p onClick={this.props.getLunar}>
+        {this.props.clicked ? (
           <span class="ico_account_on"></span>
+        ) : (
+          <span class="ico_account"></span>
         )}
       </p>
     );
   }
 }
-export default Toggle;
+export default Lunar;
