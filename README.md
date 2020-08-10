@@ -1,23 +1,39 @@
-# 프로젝트 소개 : 카카오 프렌즈샵 클론
-- 프론트엔드 3명, 백엔드 2명이 총 2주동안 카카오 프렌즈 캐릭터 상품을 구매할 수 있는 카카오 프렌즈샵 클론
+# 프로젝트 소개
+- 카카오 프렌즈샵 클론
+- 카카오 프렌즈 캐릭터 상품을 구매할 수 있는 카카오 프렌즈샵 클론
 - 개발기간 : 2주 (2020.04.20 - 2020.05.01)
-- 인원 : 프론트엔드 3명 & 백엔드 2명
+- 인원 : 프론트엔드 3명, 백엔드 2명
+<br>
 
-# 목표
+## 사용한 기술
+- HTML, CSS, JavaScript, React, Sass
+<br>
+
+# 개발 목표
 - 백엔드와 협업하여 상품 메뉴, 데이터 받아오기, 정렬하기
 - Pagination, Slider 구현하기
 - Git을 사용한 깃 형상관리 및 협업
+<br>
 
-# 사용된 기술
-- Frontend : HTML, CSS, JavaScript, React, Sass
-- Backend : Python, Django Web Framework, Bcrypt, JWT, MySQL, RDS, CORS headers
-- Deployment : AWS EC2
+## What I Did
 
-# 기능
-- 메인페이지 무한 스크롤 Pagination 구현
-- 메인 탭 컴포넌트 유형 별 조건부 렌더링 구현
-- Nav bar 레이아웃 및 동적라우팅 구현
-- 전체 탭 Rest API를 이용한 정렬 구현
+**메인 탭 / 인기 탭**
+- Home 화면인 메인 탭, 인기 탭 레이아웃 구현
+- Backend와의 통신을 통해 API를 fetch 하여 Home 화면의 상품 데이터 불러오기
+- 페이지를 스크롤 할 때마다 상품 데이터 무한 스크롤 구현
+- 받아온 상품 데이터 유형별 조건부 렌더링 구현 (메인 탭)
+
+**메뉴 탭**
+- 클릭하면 스타일이 바뀌는 메뉴 탭 레이아웃 구현
+- 메뉴 탭을 클릭하면 페이지가 바뀌는 것이 아닌 보이는 컴포넌트가 바뀌도록 동적 라우팅 구현
+
+**전체 탭**
+
+- 전체 탭 레이아웃 구현
+- Restful API query string를 이용한 정렬 구현 (판매량순, 신상품순, 낮은 가격순, 높은 가격순)
+
+**Category**
+- Mock data를 이용한 카테고리 구현 및 이미지가 바뀌는 hover 효과 구현
 
 # 데모영상
 (https://youtu.be/UfwMR_MeWLM)
